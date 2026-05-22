@@ -1,0 +1,240 @@
+/* =========================================================================
+   Blickdoktor — Colors & Type
+   Warm-Scandi · clinical clarity · empathetic
+   ========================================================================= */
+
+/* ---------- Fonts ---------------------------------------------------------
+   Display: Geist (500, tight tracking)  — calm, highly legible at size
+   Body/UI: Geist (400/500)              — same family, no weight pairing risk
+   Mono:    Geist Mono                   — codes, IDs, time
+
+   Rationale: a single, clean Scandi-grotesk performs better under cognitive
+   load (stressed patients reading symptoms or appointment confirmations).
+   No serif — was flagged as harder to read.
+   --------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ============ Colors ============ */
+
+  /* Brand */
+  --bd-blue-900: #16344C;   /* deepest, headings on light */
+  --bd-blue-800: #1F4760;
+  --bd-blue-700: #2A5470;   /* primary brand blue */
+  --bd-blue-600: #386682;
+  --bd-blue-500: #5784A0;
+  --bd-blue-300: #A9C2D2;
+  --bd-blue-100: #D9E5ED;
+  --bd-blue-50:  #ECF2F6;
+
+  /* Sage — supporting calm */
+  --bd-sage-700: #5B7163;
+  --bd-sage-600: #7A8F7E;
+  --bd-sage-400: #A8B8AC;
+  --bd-sage-100: #DDE4DC;
+  --bd-sage-50:  #ECEFE8;
+
+  /* Clay — warmth, human accent */
+  --bd-clay-700: #8E5740;
+  --bd-clay-600: #B97A5C;
+  --bd-clay-400: #D4A48C;
+  --bd-clay-100: #EFDDCF;
+  --bd-clay-50:  #F6EBE0;
+
+  /* Neutral (warm) */
+  --bd-ink:      #1B2530;   /* primary text */
+  --bd-ink-2:    #3A4754;   /* secondary text */
+  --bd-ink-3:    #5A6571;   /* tertiary / meta */
+  --bd-ink-4:    #8A929B;   /* placeholder, disabled label */
+  --bd-line:     #E5DFD4;   /* hairline border (warm) */
+  --bd-line-2:   #EFEAE0;   /* subtler line */
+  --bd-surface:  #FFFFFF;   /* card surface */
+  --bd-bg:       #F6F2EB;   /* page bg, warm off-white */
+  --bd-bg-2:     #EFE9DD;   /* alt section bg */
+  --bd-bg-3:     #E8E1D2;   /* deeper alt */
+
+  /* Semantic */
+  --bd-success:    #4F7A5B;
+  --bd-success-bg: #E4EDE5;
+  --bd-warning:    #B0823A;
+  --bd-warning-bg: #F4EAD5;
+  --bd-danger:     #A4493C;
+  --bd-danger-bg:  #F2DCD6;
+  --bd-info:       var(--bd-blue-700);
+  --bd-info-bg:    var(--bd-blue-50);
+
+  /* Semantic foreground / background */
+  --fg-1: var(--bd-ink);
+  --fg-2: var(--bd-ink-2);
+  --fg-3: var(--bd-ink-3);
+  --fg-4: var(--bd-ink-4);
+  --fg-on-brand: #F6F2EB;
+
+  --bg-1: var(--bd-bg);
+  --bg-2: var(--bd-bg-2);
+  --surface-1: var(--bd-surface);
+  --brand: var(--bd-blue-700);
+  --brand-strong: var(--bd-blue-900);
+  --accent: var(--bd-clay-600);
+  --calm: var(--bd-sage-600);
+
+  /* ============ Type ============ */
+  /* Single family. --font-serif kept as an alias for backward compat
+     but resolves to Geist — there is no serif in the system. */
+  --font-display: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans:    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif:   var(--font-display);
+  --font-mono:    "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale (rem-based) */
+  --t-display-xl: 4.5rem;   /* 72 */
+  --t-display-l:  3.5rem;   /* 56 */
+  --t-display-m:  2.75rem;  /* 44 */
+  --t-h1:         2.25rem;  /* 36 */
+  --t-h2:         1.75rem;  /* 28 */
+  --t-h3:         1.375rem; /* 22 */
+  --t-h4:         1.125rem; /* 18 */
+  --t-body:       1rem;     /* 16 */
+  --t-body-sm:    0.875rem; /* 14 */
+  --t-meta:       0.8125rem;/* 13 */
+  --t-micro:      0.75rem;  /* 12 */
+
+  --lh-tight:   1.08;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-loose:   1.65;
+
+  --ls-tight:   -0.02em;
+  --ls-snug:    -0.01em;
+  --ls-normal:  0;
+  --ls-wide:    0.04em;
+  --ls-eyebrow: 0.14em;
+
+  /* ============ Radius ============ */
+  --r-xs:  4px;
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+  --r-2xl: 28px;
+  --r-pill: 999px;
+
+  /* ============ Spacing ============ */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ============ Elevation ============ */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgba(27, 37, 48, 0.04), 0 1px 1px rgba(27, 37, 48, 0.03);
+  --shadow-2: 0 2px 4px rgba(27, 37, 48, 0.05), 0 4px 12px rgba(27, 37, 48, 0.04);
+  --shadow-3: 0 6px 16px rgba(27, 37, 48, 0.06), 0 12px 32px rgba(27, 37, 48, 0.05);
+  --shadow-focus: 0 0 0 3px rgba(42, 84, 112, 0.18);
+
+  /* ============ Motion ============ */
+  --ease-standard: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-gentle:   cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   140ms;
+  --dur-base:   220ms;
+  --dur-slow:   420ms;
+
+  /* ============ Layout ============ */
+  --container: 1200px;
+  --container-narrow: 880px;
+}
+
+/* ---------- Semantic element styles ----------------------------------- */
+html, body {
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display-xl, .display-l, .display-m,
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  color: var(--fg-1);
+  text-wrap: pretty;
+}
+
+.display-xl { font-size: var(--t-display-xl); }
+.display-l  { font-size: var(--t-display-l);  }
+.display-m  { font-size: var(--t-display-m);  }
+
+h1 { font-size: var(--t-h1); line-height: var(--lh-snug); }
+h2 { font-size: var(--t-h2); line-height: var(--lh-snug); }
+h3 { font-size: var(--t-h3); line-height: var(--lh-snug); letter-spacing: var(--ls-snug); }
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h4);
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+}
+
+p, .body {
+  font-size: var(--t-body);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+  text-wrap: pretty;
+}
+
+.lead {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  font-weight: 400;
+}
+
+.meta {
+  font-size: var(--t-meta);
+  color: var(--fg-3);
+  letter-spacing: var(--ls-snug);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--fg-2);
+}
+
+.serif-italic {
+  /* Legacy hook — retained for backward compat with existing markup.
+     Now resolves to Geist italic (medium) so it still reads as an
+     emphasised aside without introducing a serif. */
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--brand);
+}
+
+a { color: var(--brand); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--brand-strong); }
+
+::selection { background: var(--bd-clay-100); color: var(--bd-ink); }
