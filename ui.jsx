@@ -70,32 +70,3 @@ function Logo({ inverse = false, height = 28 }) {
 }
 
 Object.assign(window, { Icon, Button, Badge, Field, Logo });
-      {icon && <Icon name={icon} size={18} />}
-      {children}
-      {iconRight && <Icon name={iconRight} size={18} />}
-    </Tag>
-  );
-}
-
-function Badge({ tone = 'info', icon, children }) {
-  const cls = tone === 'info' ? 'badge' : `badge badge-${tone}`;
-  return <span className={cls}>{icon && <Icon name={icon} size={14} />}{children}</span>;
-}
-
-function Field({ label, hint, error, children }) {
-  return (
-    <div className="field">
-      {label && <label>{label}</label>}
-      {children}
-      {error ? <div className="meta" style={{ color: 'var(--bd-danger)' }}>{error}</div>
-             : hint ? <div className="meta">{hint}</div> : null}
-    </div>
-  );
-}
-
-function Logo({ inverse = false, height = 28 }) {
-  const src = inverse ? '../../assets/logo-wordmark-inverse.svg' : '../../assets/logo-wordmark.svg';
-  return <img src={src} alt="Blickdoktor" style={{ height, width: 'auto' }} />;
-}
-
-Object.assign(window, { Icon, Button, Badge, Field, Logo });
