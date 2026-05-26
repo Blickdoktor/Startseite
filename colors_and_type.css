@@ -238,3 +238,14 @@ a { color: var(--brand); text-underline-offset: 3px; text-decoration-thickness: 
 a:hover { color: var(--brand-strong); }
 
 ::selection { background: var(--bd-clay-100); color: var(--bd-ink); }
+
+/* ---------- Mobile overrides ------------------------------------------ */
+@media (max-width: 767px) {
+  :root {
+    --t-display-xl: 2.75rem;
+    --t-display-l:  2.25rem;
+    --t-display-m:  2rem;
+    --t-h1:         1.75rem;
+    --t-h2:         1.5rem;
+  }
+}
