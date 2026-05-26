@@ -1,6 +1,7 @@
 /* global React, Icon, Button */
 
 function Conditions({ onBook }) {
+  const isMobile = useIsMobile();
   const items = [
     { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: 'ab 39 €' },
     { icon: 'glasses',     title: 'Sehverschlechterung',    body: 'Unscharfes Sehen, Doppelbilder oder neue Symptome.',           price: 'ab 49 €' },
@@ -12,7 +13,7 @@ function Conditions({ onBook }) {
   return (
     <section id="sprechstunde" className="section">
       <div className="container">
-        <div className="spread" style={{ marginBottom: 48, alignItems: 'flex-end', gap: 48 }}>
+        <div className="spread" style={{ marginBottom: 48, alignItems: isMobile ? 'flex-start' : 'flex-end', gap: isMobile ? 24 : 48, flexDirection: isMobile ? 'column' : 'row' }}>
           <div className="section-head">
             <span className="eyebrow">Sprechstunde</span>
             <h2>Wobei wir Ihnen helfen können.</h2>
@@ -20,7 +21,7 @@ function Conditions({ onBook }) {
           </div>
           <Button variant="ghost" iconRight="arrow-right">Alle Leistungen</Button>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 16 }}>
           {items.map(it => (
             <button key={it.title} onClick={onBook} className="card card-interactive" style={{
               textAlign: 'left', cursor: 'pointer', border: '1px solid var(--bd-line)'

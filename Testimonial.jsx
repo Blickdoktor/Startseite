@@ -1,14 +1,15 @@
 /* global React, Icon */
 
 function Testimonial() {
+  const isMobile = useIsMobile();
   return (
     <section className="section">
       <div className="container-narrow" style={{ textAlign: 'center' }}>
         <div className="row-tight" style={{ justifyContent: 'center', gap: 4, marginBottom: 24, color: 'var(--bd-clay-600)' }}>
-          {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} ariaLabel={i === 0 ? '5 von 5 Sternen' : undefined} />)}
+          {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} />)}
         </div>
         <blockquote style={{
-          margin: 0, fontFamily: 'var(--font-serif)', fontSize: 36, lineHeight: 1.2,
+          margin: 0, fontFamily: 'var(--font-serif)', fontSize: isMobile ? 18 : 36, lineHeight: 1.2,
           letterSpacing: '-0.015em', color: 'var(--bd-ink)', fontWeight: 350
         }}>
           „Ich hatte abends ein gerötetes Auge — um halb neun hatte ich eine Ärztin am Bildschirm, um zehn das Rezept in der Apotheke. <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>So sollte Medizin sein.</span>"

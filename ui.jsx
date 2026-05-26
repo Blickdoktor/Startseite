@@ -4,7 +4,7 @@
 // (hooks accessed via React.* to avoid global name collisions across files)
 
 // Lucide icon — renders the named icon as SVG using the global lucide.icons table.
-function Icon({ name, size = 20, strokeWidth = 1.5, className = '', style, ariaLabel }) {
+function Icon({ name, size = 20, strokeWidth = 1.5, className = '', style }) {
   const ref = React.useRef(null);
   React.useEffect(() => {
     if (!ref.current || !window.lucide) return;
@@ -19,20 +19,13 @@ function Icon({ name, size = 20, strokeWidth = 1.5, className = '', style, ariaL
     const ns = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(ns, 'svg');
     Object.entries({ ...attrs, width: size, height: size, 'stroke-width': strokeWidth }).forEach(([k, v]) => svg.setAttribute(k, v));
-    // Accessibility: semantic icons get role="img" + aria-label, decorative ones get aria-hidden
-    if (ariaLabel) {
-      svg.setAttribute('role', 'img');
-      svg.setAttribute('aria-label', ariaLabel);
-    } else {
-      svg.setAttribute('aria-hidden', 'true');
-    }
     (children || []).forEach(([tag, a]) => {
       const node = document.createElementNS(ns, tag);
       Object.entries(a).forEach(([k, v]) => node.setAttribute(k, v));
       svg.appendChild(node);
     });
     ref.current.appendChild(svg);
-  }, [name, size, strokeWidth, ariaLabel]);
+  }, [name, size, strokeWidth]);
   return <span ref={ref} className={`lucide-icon ${className}`} style={{ display: 'inline-flex', ...style }} />;
 }
 
@@ -69,4 +62,16 @@ function Logo({ inverse = false, height = 28 }) {
   return <img src={src} alt="Blickdoktor" style={{ height, width: 'auto' }} />;
 }
 
-Object.assign(window, { Icon, Button, Badge, Field, Logo });
+function useIsMobile(bp = 768) {
+  const [m, setM] = React.useState(() => window.innerWidth < bp);
+  React.useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${bp - 1}px)`);
+    const h = (e) => setM(e.matches);
+    mq.addEventListener('change', h);
+    setM(mq.matches);
+    return () => mq.removeEventListener('change', h);
+  }, [bp]);
+  return m;
+}
+
+Object.assign(window, { Icon, Button, Badge, Field, Logo, useIsMobile });

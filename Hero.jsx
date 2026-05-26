@@ -1,4 +1,4 @@
-/* global React, Icon, Button, Badge, Logo, useIsMobile */
+/* global React, Icon, Button, Badge, Logo */
 
 function Hero({ variant = 'A', onBook }) {
   if (variant === 'A') return <HeroSplit onBook={onBook} />;
@@ -10,24 +10,24 @@ function Hero({ variant = 'A', onBook }) {
 function HeroSplit({ onBook }) {
   const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: isMobile ? 16 : 32, paddingBottom: isMobile ? 48 : 80 }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.1fr 0.9fr', gap: isMobile ? 32 : 64, alignItems: 'center' }}>
+    <section id="top" style={{ paddingTop: 32, paddingBottom: 80 }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
         <div className="stack-6">
           <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
-          <h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
+          <h1 className="display-l" style={{ margin: 0, fontSize: isMobile ? 36 : 64 }}>
             Augenarzt-Sprechstunde,<br/>
             <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>in wenigen Minuten.</span>
           </h1>
-          <p className="lead" style={{ maxWidth: 480 }}>
+          <p className="lead" style={{ maxWidth: isMobile ? '100%' : 480 }}>
             Schildern Sie kurz Ihre Beschwerden — eine Fachärztin ruft Sie an. Ohne Wartezimmer, ohne Anfahrt.
           </p>
-          <div className="row-tight" style={{ gap: 12, marginTop: 8 }}>
-            <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right">Termin vereinbaren</Button>
-            <Button variant="ghost" size="lg" icon="play">So funktioniert es</Button>
+          <div className="row-tight" style={{ gap: 12, marginTop: 8, flexDirection: isMobile ? 'column' : 'row', width: isMobile ? '100%' : 'auto' }}>
+            <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right" style={isMobile ? { width: '100%' } : undefined}>Termin vereinbaren</Button>
+            <Button variant="ghost" size="lg" icon="play" style={isMobile ? { width: '100%' } : undefined}>So funktioniert es</Button>
           </div>
-          <div className="row" style={{ gap: 24, marginTop: 16 }}>
+          <div className="row" style={{ flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 8 : 24, marginTop: 16, alignItems: isMobile ? 'flex-start' : 'center' }}>
             <div className="row-tight" style={{ gap: 8 }}>
-              <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} ariaLabel="Bewertung" />
+              <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} />
               <span className="meta" style={{ color: 'var(--fg-2)' }}><strong style={{ color: 'var(--fg-1)' }}>4,9</strong> · 2.140 Bewertungen</span>
             </div>
             <div className="row-tight" style={{ gap: 8 }}>
@@ -44,7 +44,7 @@ function HeroSplit({ onBook }) {
 
 function HeroIllustration() {
   return (
-    <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
+    <div style={{ position: 'relative', aspectRatio: isMobile ? '1/1' : '4/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
       <SignalflowEye />
       {/* Floating card: next available call */}
       <div style={{
@@ -243,11 +243,10 @@ function HeroCentered({ onBook }) {
 
 /* ───────── Variant C — Asymmetric with metric strip ───────── */
 function HeroEditorial({ onBook }) {
-  const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: isMobile ? 24 : 48, paddingBottom: isMobile ? 48 : 80 }}>
+    <section id="top" style={{ paddingTop: 48, paddingBottom: 80 }}>
       <div className="container">
-        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'flex-start', gap: isMobile ? 32 : 48 }}>
+        <div className="row" style={{ alignItems: 'flex-start', gap: 48 }}>
           <div style={{ flex: '1 1 56%' }} className="stack-6">
             <div className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Digitale Augenheilkunde · seit 2021</div>
             <h1 style={{
@@ -277,7 +276,7 @@ function HeroEditorial({ onBook }) {
         </div>
         {/* Metric strip */}
         <div style={{
-          marginTop: isMobile ? 32 : 56, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? 24 : 0,
+          marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0,
           borderTop: '1px solid var(--bd-line)', borderBottom: '1px solid var(--bd-line)', paddingBlock: 32
         }}>
           {[
