@@ -1,6 +1,7 @@
-/* global React, Icon */
+/* global React, Icon, useIsMobile */
 
 function Faq() {
+  const isMobile = useIsMobile();
   const items = [
     {
       q: 'Wie schnell bekomme ich einen Termin?',
@@ -30,8 +31,8 @@ function Faq() {
   const [open, setOpen] = React.useState(0);
   return (
     <section className="section">
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'flex-start' }}>
-        <div className="section-head" style={{ position: 'sticky', top: 96 }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.4fr', gap: isMobile ? 32 : 64, alignItems: 'flex-start' }}>
+        <div className="section-head" style={{ position: isMobile ? 'static' : 'sticky', top: 96 }}>
           <span className="eyebrow">FAQ</span>
           <h2>Häufige Fragen.</h2>
           <p>Sie finden hier keine Antwort? Schreiben Sie uns an <a href="mailto:hallo@blickdoktor.de">hallo@blickdoktor.de</a>.</p>
