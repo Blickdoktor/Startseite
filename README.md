@@ -33,6 +33,8 @@ Toggle the **Tweaks** button in the toolbar to swap:
 
 ## Notes
 
+Mobile-responsive update deployed.
+
 - The doctor avatars are monogram placeholders. Replace with real photography when available — the `aspect-ratio: 1` slot is sized for portrait headshots.
 - Hero illustrations are SVG, designed in-system. They re-use the lens + iris motif from the logo. They are decorative — pair with real photography on launch.
 - The booking flow is a click-through prototype: it accepts input but does not actually post anywhere.
