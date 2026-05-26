@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Blickdoktor — Marketing Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ── Force full colour output ─────────────────── */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Page setup ───────────────────────────────── */
+  @page {
+    size: A4 landscape;
+    margin: 1cm 1.5cm;
+  }
+
+  /* ── Kill all animation / interactivity ──────── */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  button { cursor: default; }
+
+  /* ── Header: un-stick, always solid ─────────── */
+  header {
+    position: static !important;
+    background: var(--bd-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid var(--bd-line) !important;
+  }
+
+  /* ── Section page breaks ─────────────────────── */
+  section, footer { break-inside: avoid; }
+
+  #wie          { break-before: page; }
+  #sprechstunde { break-before: page; }
+  #team         { break-before: page; }
+  #preise       { break-before: page; }
+  footer        { break-before: page; }
+
+  /* ── Remove screen-only chrome ───────────────── */
+  /* Tweaks panel is not loaded in this file */
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React + Babel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+
+<!-- UI primitives + components (no tweaks-panel, no Booking, no Hero.jsx) -->
+<script type="text/babel" data-presets="react" src="ui.jsx"></script>
+<script type="text/babel" data-presets="react" src="Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="Hero-print.jsx"></script>
+<script type="text/babel" data-presets="react" src="Trust.jsx"></script>
+<script type="text/babel" data-presets="react" src="HowItWorks.jsx"></script>
+<script type="text/babel" data-presets="react" src="Conditions.jsx"></script>
+<script type="text/babel" data-presets="react" src="Doctors.jsx"></script>
+<script type="text/babel" data-presets="react" src="Testimonial.jsx"></script>
+<script type="text/babel" data-presets="react" src="Pricing.jsx"></script>
+<script type="text/babel" data-presets="react" src="Footer.jsx"></script>
+
+<!-- Print app: renders all sections, auto-triggers window.print() -->
+<script type="text/babel" data-presets="react" src="app-print.jsx"></script>
+</body>
+</html>

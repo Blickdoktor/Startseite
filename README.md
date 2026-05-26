@@ -1,78 +1,38 @@
-# Blickdoktor — Marketing Website
+# Blickdoktor — Website UI kit
 
-Schnelle, fachärztliche Augenheilkunde — online.
+Interactive marketing site recreation for the Blickdoktor brand. German-language, formal _Sie_, warm-Scandi visual direction.
 
-## Projektstruktur
+## What's in here
 
-```
-/
-├── index.html                  ← Einstiegspunkt
-├── colors_and_type.css         ← Design-Tokens (Farben, Typografie, Abstände)
-├── styles.css                  ← Globale Stile
-├── app.jsx                     ← Root-Komponente
-├── ui.jsx                      ← Gemeinsame UI-Elemente
-├── tweaks-panel.jsx            ← In-Page Tweaks-Panel
-│
-├── Header.jsx                  ← Navigation & Header
-├── Hero.jsx                    ← Hero-Sektion
-├── Trust.jsx                   ← Vertrauens-Indikatoren
-├── HowItWorks.jsx              ← So funktioniert's
-├── Conditions.jsx              ← Beschwerdebilder
-├── Doctors.jsx                 ← Ärzte-Sektion
-├── Testimonial.jsx             ← Patientenstimmen
-├── Pricing.jsx                 ← Preise
-├── Faq.jsx                     ← Häufige Fragen
-├── Footer.jsx                  ← Footer
-├── Booking.jsx                 ← Buchungsflow
-│
-└── assets/
-    ├── logo-mark.svg
-    ├── logo-mark-sage.svg
-    ├── logo-wordmark.svg
-    ├── logo-wordmark-inverse.svg
-    ├── illustration-consult.svg
-    ├── illustration-eye.svg
-    └── illustration-online.svg
-```
+| File | Purpose |
+| --- | --- |
+| `index.html` | The wired-up app. Open in a browser. |
+| `styles.css` | Page-level styles built on the root `colors_and_type.css` tokens. |
+| `ui.jsx` | Shared primitives: `<Icon>`, `<Button>`, `<Badge>`, `<Field>`, `<Logo>`. |
+| `Header.jsx` | Site header with sticky-on-scroll backdrop blur. |
+| `Hero.jsx` | Hero with **three variants** (A — split + illustration, B — centered editorial, C — asymmetric with metric strip). |
+| `Trust.jsx` | Four-prop trust strip. |
+| `HowItWorks.jsx` | Three-step explainer. |
+| `Conditions.jsx` | Six-card grid of common eye complaints. |
+| `Doctors.jsx` | Doctor team cards with monogram avatars. |
+| `Testimonial.jsx` | Single editorial pull-quote. |
+| `Pricing.jsx` | Two-card pricing (self-pay vs reimbursable). |
+| `Faq.jsx` | Sticky-headed FAQ accordion. |
+| `Footer.jsx` | Dark footer with final CTA + 3 link columns. |
+| `Booking.jsx` | Four-step booking flow with **three layout variants** (modal, drawer, fullscreen). |
+| `app.jsx` | Root App. Wires Tweaks (hero variant, booking layout, accent emphasis). |
+| `tweaks-panel.jsx` | Tweaks framework. |
 
-## Lokale Vorschau
+## Tweaks
 
-Da die JSX-Komponenten über `<script type="text/babel">` geladen werden, benötigen Sie einen lokalen HTTP-Server (direkt aus dem Dateisystem öffnen funktioniert nicht).
+Toggle the **Tweaks** button in the toolbar to swap:
 
-**Option 1 — VS Code Live Server**  
-Rechtsklick auf `index.html` → „Open with Live Server"
+- **Hero layout** — Split / Centered / Editorial.
+- **Booking surface** — Modal / Drawer / Fullscreen.
+- **Accent emphasis** — Sage / Clay / Marine. (Swaps which family the page leans on for highlights.)
 
-**Option 2 — Python (im Terminal)**  
-```bash
-cd blickdoktor
-python3 -m http.server 8080
-```
-Dann `http://localhost:8080` im Browser öffnen.
+## Notes
 
-**Option 3 — Node.js**  
-```bash
-npx serve .
-```
-
-## Technologie
-
-- **React 18** (via CDN, kein Build-Schritt nötig)
-- **Babel Standalone** (JSX-Transpilierung im Browser)
-- **Lucide Icons** (via CDN)
-- Keine npm-Abhängigkeiten — alles läuft direkt im Browser
-
-## GitHub Pages
-
-Um die Seite über GitHub Pages zu veröffentlichen:
-
-1. Repository-Einstellungen → **Pages**
-2. Branch: `main`, Ordner: `/ (root)`
-3. Speichern — die Seite ist nach wenigen Minuten unter  
-   `https://<ihr-nutzername>.github.io/<repository-name>/` erreichbar
-
-## Design System
-
-Die Gestaltung basiert auf dem **Blickdoktor Design System**:
-- Farbe: Marine-Blau (`#2A5470`), Salbei (`#7A8F7E`), Ton (`#B97A5C`)
-- Schrift: Geist (Google Fonts)
-- 8 px Basisraster
+- The doctor avatars are monogram placeholders. Replace with real photography when available — the `aspect-ratio: 1` slot is sized for portrait headshots.
+- Hero illustrations are SVG, designed in-system. They re-use the lens + iris motif from the logo. They are decorative — pair with real photography on launch.
+- The booking flow is a click-through prototype: it accepts input but does not actually post anywhere.

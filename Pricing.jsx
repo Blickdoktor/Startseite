@@ -1,7 +1,6 @@
-/* global React, Icon, Button, useIsMobile */
+/* global React, Icon, Button */
 
 function Pricing({ onBook }) {
-  const isMobile = useIsMobile();
   const items = [
     { label: 'Rezeptverlängerung',     hint: 'Brille oder Kontaktlinsen',                price: '29 €' },
     { label: 'Trockene Augen',         hint: 'Beratung & Therapieempfehlung',            price: '39 €' },
@@ -13,8 +12,8 @@ function Pricing({ onBook }) {
   ];
   return (
     <section id="preise" className="section">
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr', gap: isMobile ? 32 : 64, alignItems: 'flex-start' }}>
-        <div className="section-head" style={{ position: isMobile ? 'static' : 'sticky', top: 96 }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
+        <div className="section-head" style={{ position: 'sticky', top: 96 }}>
           <span className="eyebrow">Preise</span>
           <h2>Transparent, ab 29 €.</h2>
           <p style={{ marginBottom: 24 }}>
