@@ -1,6 +1,7 @@
-/* global React, Icon, Badge */
+/* global React, Icon, Badge, useIsMobile */
 
 function Doctors() {
+  const isMobile = useIsMobile();
   const docs = [
     { name: 'Dr. med. Lena Vogt',     role: 'Fachärztin für Augenheilkunde',  focus: 'Trockene Augen, Glaukom', initials: 'LV', tone: 'sage' },
     { name: 'Dr. med. Jonas Albrecht',role: 'Facharzt für Augenheilkunde',    focus: 'Kontaktlinsen, Refraktion', initials: 'JA', tone: 'blue' },
@@ -17,7 +18,7 @@ function Doctors() {
           <h2>Approbierte Augenärzt:innen,<br/><span className="serif-italic" style={{ color: 'var(--bd-sage-700)' }}>die zuhören.</span></h2>
           <p>Alle behandelnden Ärzt:innen sind in Deutschland approbiert und mehrfach fachlich geprüft. Sie wählen Ihre:n Ärzt:in selbst aus.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: 16 }}>
           {docs.map(d => (
             <div key={d.name} className="card" style={{ padding: 20, borderColor: 'var(--bd-line)' }}>
               <div style={{
