@@ -5,7 +5,7 @@ function Testimonial() {
     <section className="section">
       <div className="container-narrow" style={{ textAlign: 'center' }}>
         <div className="row-tight" style={{ justifyContent: 'center', gap: 4, marginBottom: 24, color: 'var(--bd-clay-600)' }}>
-          {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} />)}
+          {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} ariaLabel={i === 0 ? '5 von 5 Sternen' : undefined} />)}
         </div>
         <blockquote style={{
           margin: 0, fontFamily: 'var(--font-serif)', fontSize: 36, lineHeight: 1.2,
