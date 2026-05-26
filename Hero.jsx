@@ -1,4 +1,4 @@
-/* global React, Icon, Button, Badge, Logo */
+/* global React, Icon, Button, Badge, Logo, useIsMobile */
 
 function Hero({ variant = 'A', onBook }) {
   if (variant === 'A') return <HeroSplit onBook={onBook} />;
@@ -8,9 +8,10 @@ function Hero({ variant = 'A', onBook }) {
 
 /* ───────── Variant A — Split with illustration ───────── */
 function HeroSplit({ onBook }) {
+  const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: 32, paddingBottom: 80 }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
+    <section id="top" style={{ paddingTop: isMobile ? 16 : 32, paddingBottom: isMobile ? 48 : 80 }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.1fr 0.9fr', gap: isMobile ? 32 : 64, alignItems: 'center' }}>
         <div className="stack-6">
           <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
           <h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
@@ -26,7 +27,7 @@ function HeroSplit({ onBook }) {
           </div>
           <div className="row" style={{ gap: 24, marginTop: 16 }}>
             <div className="row-tight" style={{ gap: 8 }}>
-              <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} />
+              <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} ariaLabel="Bewertung" />
               <span className="meta" style={{ color: 'var(--fg-2)' }}><strong style={{ color: 'var(--fg-1)' }}>4,9</strong> · 2.140 Bewertungen</span>
             </div>
             <div className="row-tight" style={{ gap: 8 }}>
@@ -242,10 +243,11 @@ function HeroCentered({ onBook }) {
 
 /* ───────── Variant C — Asymmetric with metric strip ───────── */
 function HeroEditorial({ onBook }) {
+  const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: 48, paddingBottom: 80 }}>
+    <section id="top" style={{ paddingTop: isMobile ? 24 : 48, paddingBottom: isMobile ? 48 : 80 }}>
       <div className="container">
-        <div className="row" style={{ alignItems: 'flex-start', gap: 48 }}>
+        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'flex-start', gap: isMobile ? 32 : 48 }}>
           <div style={{ flex: '1 1 56%' }} className="stack-6">
             <div className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Digitale Augenheilkunde · seit 2021</div>
             <h1 style={{
@@ -275,7 +277,7 @@ function HeroEditorial({ onBook }) {
         </div>
         {/* Metric strip */}
         <div style={{
-          marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0,
+          marginTop: isMobile ? 32 : 56, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? 24 : 0,
           borderTop: '1px solid var(--bd-line)', borderBottom: '1px solid var(--bd-line)', paddingBlock: 32
         }}>
           {[
