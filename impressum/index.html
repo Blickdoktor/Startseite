@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Impressum — Blickdoktor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blickdoktor.github.io/Startseite/impressum/">
+<link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose h1 { font-family: var(--font-serif); font-size: 48px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 32px; }
+  .prose h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 400; letter-spacing: -0.01em; margin: 48px 0 16px; color: var(--bd-ink); }
+  .prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+  .prose a  { color: var(--bd-blue-700); }
+  @media (max-width: 768px) {
+    .prose h1 { font-size: 32px; }
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react" src="../ui.jsx"></script>
+<script type="text/babel" data-presets="react" src="../Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="../Footer.jsx"></script>
+<script type="text/babel" data-presets="react">
+/* global React, ReactDOM, Header, Footer */
+const ETERMIN_URL = 'https://www.etermin.net/blickdoktor';
+function App() {
+  const onBook = () => window.open(ETERMIN_URL, '_blank', 'noopener');
+  return (
+    <>
+      <Header onBook={onBook} />
+      <main>
+        <section className="section">
+          <div className="container">
+            <div className="prose">
+              <span className="eyebrow">Rechtliches</span>
+              <h1>Impressum</h1>
+
+              <h2>Dienstanbieter</h2>
+              <p>
+                Dienstanbieter dieses Onlineangebotes und gemäß § 7 TMG für den Inhalt dieser Site verantwortlich ist:
+              </p>
+              <p>
+                Dr. med. Evrim Oehmichen<br/>
+                E-Mail: <a href="mailto:kontakt@blickdoktor.de">kontakt@blickdoktor.de</a><br/>
+                Web: <a href="https://www.blickdoktor.de" target="_blank" rel="noopener">www.blickdoktor.de</a>
+              </p>
+
+              <h2>Redaktionell verantwortlich</h2>
+              <p>
+                Redaktionell und inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV ist Dr. med. Evrim Oehmichen.
+              </p>
+
+              <h2>Weitere Informationen</h2>
+              <p>
+                Weitere Informationen zur Nutzung von Blickdoktor finden Sie in unserer{' '}
+                <a href="/Startseite/datenschutzerklaerung/">Datenschutzerklärung</a>.
+                Die Datenschutzrichtlinien beschreiben den Umgang mit persönlichen Daten.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer onBook={onBook} />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
