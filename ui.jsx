@@ -3,7 +3,7 @@
 
 // (hooks accessed via React.* to avoid global name collisions across files)
 
-// Lucide icon â renders the named icon as SVG using the global lucide.icons table.
+// Lucide icon — renders the named icon as SVG using the global lucide.icons table.
 function Icon({ name, size = 20, strokeWidth = 1.5, className = '', style }) {
   const ref = React.useRef(null);
   React.useEffect(() => {
