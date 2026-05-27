@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Dr. med. Evrim Oehmichen — Blickdoktor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr. med. Evrim Oehmichen ist Fachärztin für Augenheilkunde und Gründerin von Blickdoktor. FEBO — Fellow of European Board of Ophthalmology.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blickdoktor.github.io/Startseite/aerzte/dr-evrim-oehmichen/">
+<link rel="icon" href="../../logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  .doctor-page { max-width: 900px; margin: 0 auto; }
+  .doctor-hero {
+    display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: flex-start;
+  }
+  .doctor-hero img {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
+    border-radius: var(--r-xl); display: block;
+  }
+  .doctor-prose h1 { font-family: var(--font-serif); font-size: 44px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .doctor-prose .role { font-size: 17px; color: var(--fg-2); margin-bottom: 6px; }
+  .doctor-prose .cred { font-size: 14px; color: var(--fg-3); margin-bottom: 32px; }
+  .doctor-prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+  .doctor-prose blockquote {
+    border-left: 3px solid var(--bd-sage-300); padding: 16px 24px; margin: 32px 0;
+    background: var(--bd-sage-50); border-radius: 0 var(--r-md) var(--r-md) 0;
+    font-family: var(--font-serif); font-size: 20px; font-style: italic; color: var(--bd-ink);
+    letter-spacing: -0.01em; line-height: 1.4;
+  }
+  .doctor-prose blockquote cite { display: block; font-style: normal; font-family: var(--font-sans); font-size: 13px; color: var(--fg-3); margin-top: 12px; }
+  @media (max-width: 768px) {
+    .doctor-hero { grid-template-columns: 1fr; gap: 32px; }
+    .doctor-hero img { max-width: 240px; }
+    .doctor-prose h1 { font-size: 32px; }
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react" src="../../ui.jsx"></script>
+<script type="text/babel" data-presets="react" src="../../Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="../../Footer.jsx"></script>
+<script type="text/babel" data-presets="react">
+/* global React, ReactDOM, Header, Footer, Button */
+const ETERMIN_URL = 'https://www.etermin.net/blickdoktor';
+function App() {
+  const onBook = () => window.open(ETERMIN_URL, '_blank', 'noopener');
+  return (
+    <>
+      <Header onBook={onBook} />
+      <main>
+        <section className="section">
+          <div className="container">
+            <div className="doctor-page">
+              <div className="doctor-hero">
+                <img
+                  src="https://static.wixstatic.com/media/4b69d1_1b75da51fa70446c8c054b3b46e910e4~mv2.jpg/v1/crop/x_0,y_0,w_591,h_860/fill/w_592,h_860,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/B379%20Tasci%204x6cm.jpg"
+                  alt="Dr. med. Evrim Oehmichen"
+                />
+                <div className="doctor-prose">
+                  <span className="eyebrow">Ärztin</span>
+                  <h1>Dr. med. Evrim Oehmichen</h1>
+                  <p className="role">Fachärztin für Augenheilkunde</p>
+                  <p className="cred">FEBO — Fellow of European Board of Ophthalmology</p>
+
+                  <blockquote>
+                    Lies in meinen Augen, was ich dir nicht alles sagen kann.
+                    <cite>Gotthold Ephraim Lessing</cite>
+                  </blockquote>
+
+                  <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 400, letterSpacing: '-0.01em', margin: '32px 0 12px' }}>Der Hintergrund</h2>
+                  <p>
+                    Guten Tag, ich bin Augenärztin Dr. med. E. Oehmichen und habe die Online-Plattform Blickdoktor entwickelt, um Patient:innen schnellstmöglich bei Augenproblemen zu helfen. In meiner Tätigkeit als Ärztin gehen mir die Probleme im klinischen Alltag — insbesondere die langen Wartezeiten und die zunehmende Unzufriedenheit der Patient:innen — sehr zu Herzen.
+                  </p>
+                  <p>
+                    Blickdoktor hat sich zum Ziel gesetzt, Patient:innen mit akuten oder länger bestehenden Augenproblemen online abzufangen und per Telemedizin zu behandeln, zu beraten und mögliche Notfälle sinnvoll zu führen.
+                  </p>
+                  <p>
+                    Insbesondere für ältere Patient:innen, aber auch für unsere jungen Patient:innen, bedeutet der Weg zum nächstgelegenen Augenarzt eine große Herausforderung. Oft sind die Praxen und Kliniken überlastet und man bekommt keinen zeitnahen freien Termin.
+                  </p>
+                  <p>
+                    Augenprobleme bringen nicht nur eine enorme Angst mit sich, sondern schränken auch oft erheblich die Lebensqualität der Betroffenen ein. Blickdoktor bietet Patient:innen die Möglichkeit, sich online und bequem von zuhause — ohne lange Anfahrt und ohne lange Wartezeiten — einen Termin zu buchen mit freundlicher, schneller und kompetenter Beratung.
+                  </p>
+
+                  <div style={{ marginTop: 32 }}>
+                    <Button variant="primary" size="lg" as="a" href={ETERMIN_URL} target="_blank" rel="noopener" iconRight="arrow-right">
+                      Termin vereinbaren
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer onBook={onBook} />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
