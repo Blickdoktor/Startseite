@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Dr. med. Vincent Oehmichen — Blickdoktor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dr. med. Vincent Oehmichen ist Facharzt für Augenheilkunde bei Blickdoktor.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blickdoktor.github.io/Startseite/aerzte/dr-vincent-oehmichen/">
+<link rel="icon" href="../../logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  .doctor-page { max-width: 900px; margin: 0 auto; }
+  .monogram-avatar {
+    width: 200px; height: 267px; border-radius: var(--r-xl);
+    background: var(--bd-blue-100);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif); font-size: 72px; letter-spacing: -0.02em;
+    color: var(--bd-blue-800); flex-shrink: 0;
+  }
+  .doctor-hero { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: flex-start; }
+  .doctor-prose h1 { font-family: var(--font-serif); font-size: 44px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .doctor-prose .role { font-size: 17px; color: var(--fg-2); margin-bottom: 32px; }
+  .doctor-prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+  @media (max-width: 768px) {
+    .doctor-hero { grid-template-columns: 1fr; gap: 32px; }
+    .doctor-prose h1 { font-size: 32px; }
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react" src="../../ui.jsx"></script>
+<script type="text/babel" data-presets="react" src="../../Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="../../Footer.jsx"></script>
+<script type="text/babel" data-presets="react">
+/* global React, ReactDOM, Header, Footer, Button */
+const ETERMIN_URL = 'https://www.etermin.net/blickdoktor';
+function App() {
+  const onBook = () => window.open(ETERMIN_URL, '_blank', 'noopener');
+  return (
+    <>
+      <Header onBook={onBook} />
+      <main>
+        <section className="section">
+          <div className="container">
+            <div className="doctor-page">
+              <div className="doctor-hero">
+                <div className="monogram-avatar">VO</div>
+                <div className="doctor-prose">
+                  <span className="eyebrow">Arzt</span>
+                  <h1>Dr. med. Vincent Oehmichen</h1>
+                  <p className="role">Facharzt für Augenheilkunde</p>
+                  <p>
+                    Dr. med. Vincent Oehmichen ist Facharzt für Augenheilkunde bei Blickdoktor. Weitere Informationen folgen in Kürze.
+                  </p>
+                  <div style={{ marginTop: 32 }}>
+                    <Button variant="primary" size="lg" as="a" href={ETERMIN_URL} target="_blank" rel="noopener" iconRight="arrow-right">
+                      Termin vereinbaren
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer onBook={onBook} />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
