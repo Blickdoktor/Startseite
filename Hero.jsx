@@ -8,24 +8,23 @@ function Hero({ variant = 'A', onBook }) {
 
 /* ───────── Variant A — Split with illustration ───────── */
 function HeroSplit({ onBook }) {
-  const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: isMobile ? 16 : 32, paddingBottom: isMobile ? 48 : 80 }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.1fr 0.9fr', gap: isMobile ? 32 : 64, alignItems: 'center' }}>
+    <section id="top" style={{ paddingTop: 32, paddingBottom: 80 }}>
+      <div className="container hero-split-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
         <div className="stack-6">
           <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
-          <h1 className="display-l" style={{ margin: 0, fontSize: isMobile ? 36 : 64 }}>
+          <h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
             Augenarzt-Sprechstunde,<br/>
             <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>in wenigen Minuten.</span>
           </h1>
-          <p className="lead" style={{ maxWidth: isMobile ? '100%' : 480 }}>
+          <p className="lead" style={{ maxWidth: 480 }}>
             Schildern Sie kurz Ihre Beschwerden — eine Fachärztin ruft Sie an. Ohne Wartezimmer, ohne Anfahrt.
           </p>
-          <div className="row-tight" style={{ gap: 12, marginTop: 8, flexDirection: isMobile ? 'column' : 'row', width: isMobile ? '100%' : 'auto' }}>
-            <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right" style={isMobile ? { width: '100%' } : undefined}>Termin vereinbaren</Button>
-            <Button variant="ghost" size="lg" icon="play" style={isMobile ? { width: '100%' } : undefined}>So funktioniert es</Button>
+          <div className="row-tight" style={{ gap: 12, marginTop: 8 }}>
+            <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
+            <Button variant="ghost" size="lg" as="a" href="#wie" icon="play">So funktioniert es</Button>
           </div>
-          <div className="row" style={{ flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 8 : 24, marginTop: 16, alignItems: isMobile ? 'flex-start' : 'center' }}>
+          <div className="row" style={{ gap: 24, marginTop: 16 }}>
             <div className="row-tight" style={{ gap: 8 }}>
               <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} />
               <span className="meta" style={{ color: 'var(--fg-2)' }}><strong style={{ color: 'var(--fg-1)' }}>4,9</strong> · 2.140 Bewertungen</span>
@@ -43,21 +42,9 @@ function HeroSplit({ onBook }) {
 }
 
 function HeroIllustration() {
-  const isMobile = useIsMobile();
   return (
-    <div style={{ position: 'relative', aspectRatio: isMobile ? '1/1' : '4/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
+    <div style={{ position: 'relative', aspectRatio: '6/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
       <SignalflowEye />
-      {/* Floating card: next available call */}
-      <div style={{
-        position: 'absolute', left: 24, bottom: 24,
-        background: 'rgba(246,242,235,0.94)', backdropFilter: 'blur(10px)',
-        border: '1px solid var(--bd-line)', borderRadius: 'var(--r-lg)',
-        padding: '14px 18px', boxShadow: 'var(--shadow-2)', maxWidth: 260
-      }}>
-        <div className="eyebrow" style={{ color: 'var(--bd-sage-700)', marginBottom: 6 }}>Nächster freier Anruf</div>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--bd-ink)', letterSpacing: '-0.01em' }}>In ca. 8 Minuten</div>
-        <div className="meta" style={{ marginTop: 4 }}>Dr. med. Lena Vogt · Anruf</div>
-      </div>
     </div>
   );
 }
@@ -153,6 +140,7 @@ function SignalflowEye() {
   return (
     <svg
       viewBox="0 0 400 500"
+      preserveAspectRatio="xMidYMid slice"
       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Animierte Darstellung: aus verstreuten Lichtpunkten formt sich ein klar fokussiertes Auge."
@@ -226,8 +214,8 @@ function HeroCentered({ onBook }) {
           Fachärztliche Beratung bei Augenproblemen — telefonisch, in wenigen Minuten, bequem von zu Hause aus.
         </p>
         <div className="row-tight" style={{ gap: 12 }}>
-          <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right">Termin vereinbaren</Button>
-          <Button variant="secondary" size="lg">Symptome prüfen</Button>
+          <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
+          <Button variant="secondary" size="lg" as="a" href="#sprechstunde">Symptome prüfen</Button>
         </div>
         <div style={{ marginTop: 40, width: '100%', maxWidth: 820, position: 'relative', aspectRatio: '16/8', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-blue-50)' }}>
           <svg viewBox="0 0 800 400" style={{ width: '100%', height: '100%' }} xmlns="http://www.w3.org/2000/svg">
@@ -244,11 +232,10 @@ function HeroCentered({ onBook }) {
 
 /* ───────── Variant C — Asymmetric with metric strip ───────── */
 function HeroEditorial({ onBook }) {
-  const isMobile = useIsMobile();
   return (
-    <section id="top" style={{ paddingTop: isMobile ? 24 : 48, paddingBottom: isMobile ? 48 : 80 }}>
+    <section id="top" style={{ paddingTop: 48, paddingBottom: 80 }}>
       <div className="container">
-        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'flex-start', gap: isMobile ? 32 : 48 }}>
+        <div className="row" style={{ alignItems: 'flex-start', gap: 48 }}>
           <div style={{ flex: '1 1 56%' }} className="stack-6">
             <div className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Digitale Augenheilkunde · seit 2021</div>
             <h1 style={{
@@ -261,8 +248,8 @@ function HeroEditorial({ onBook }) {
               Wir sind ein Team aus Augenärzt:innen, das Sie online behandelt — mit der gleichen Sorgfalt wie in der Praxis.
             </p>
             <div className="row-tight" style={{ gap: 12 }}>
-              <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right">Termin vereinbaren</Button>
-              <Button variant="ghost" size="lg">Unser Vorgehen</Button>
+              <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
+              <Button variant="ghost" size="lg" as="a" href="#wie">Unser Vorgehen</Button>
             </div>
           </div>
           <div style={{ flex: '1 1 44%' }}>
@@ -278,14 +265,14 @@ function HeroEditorial({ onBook }) {
         </div>
         {/* Metric strip */}
         <div style={{
-          marginTop: isMobile ? 32 : 56, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? 24 : 0,
+          marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0,
           borderTop: '1px solid var(--bd-line)', borderBottom: '1px solid var(--bd-line)', paddingBlock: 32
         }}>
           {[
             ['Minuten', 'Antwortzeit — nicht Stunden'],
             ['12.400+', 'behandelte Patient:innen'],
             ['4,9/5', '2.140 Bewertungen'],
-            ['ab 29 €', 'transparente Festpreise'],
+            ['25,47 €', 'transparente Festpreise'],
           ].map(([n, l], i) => (
             <div key={i} style={{
               padding: '0 24px',

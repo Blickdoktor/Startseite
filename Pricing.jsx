@@ -2,20 +2,20 @@
 
 function Pricing({ onBook }) {
   const items = [
-    { label: 'Rezeptverlängerung',     hint: 'Brille oder Kontaktlinsen',                price: '29 €' },
-    { label: 'Trockene Augen',         hint: 'Beratung & Therapieempfehlung',            price: '39 €' },
-    { label: 'Bindehautentzündung',    hint: 'Rote, juckende Augen',                     price: '39 €' },
-    { label: 'Sehverschlechterung',    hint: 'Unscharfes Sehen, Doppelbilder',           price: '49 €' },
-    { label: 'Kinder-Augenheilkunde',  hint: 'Sehschwäche, Schielen, Vorsorge',          price: '49 €' },
-    { label: 'Anderes Anliegen',       hint: 'Beratung mit Fachärztin',                  price: '49 €' },
-    { label: 'Zweitmeinung',           hint: 'Beurteilung eines bestehenden Befundes',   price: '89 €', strong: true },
+    { label: 'Rezeptverlängerung',     hint: 'Brille oder Kontaktlinsen',                price: '25,47 €' },
+    { label: 'Trockene Augen',         hint: 'Beratung & Therapieempfehlung',            price: '25,47 €' },
+    { label: 'Bindehautentzündung',    hint: 'Rote, juckende Augen',                     price: '25,47 €' },
+    { label: 'Sehverschlechterung',    hint: 'Unscharfes Sehen, Doppelbilder',           price: '25,47 €' },
+    { label: 'Kinder-Augenheilkunde',  hint: 'Sehschwäche, Schielen, Vorsorge',          price: '25,47 €' },
+    { label: 'Anderes Anliegen',       hint: 'Beratung mit Fachärztin',                  price: '25,47 €' },
+    { label: 'Zweitmeinung',           hint: 'Beurteilung eines bestehenden Befundes',   price: '25,47 €' },
   ];
   return (
     <section id="preise" className="section">
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
+      <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
         <div className="section-head" style={{ position: 'sticky', top: 96 }}>
           <span className="eyebrow">Preise</span>
-          <h2>Transparent, ab 29 €.</h2>
+          <h2>Transparent, 25,47 €.</h2>
           <p style={{ marginBottom: 24 }}>
             Feste Preise je Anliegen — keine Abrechnung über die Krankenkasse, keine versteckten Gebühren.
             Sie zahlen erst nach der Sprechstunde.
@@ -32,7 +32,7 @@ function Pricing({ onBook }) {
             <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
             <span style={{ fontSize: 14.5, color: 'var(--fg-2)' }}>Zahlung wird erst nach dem Anruf freigegeben</span>
           </div>
-          <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right">Termin vereinbaren</Button>
+          <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
         </div>
 
         <div className="card" style={{ padding: 0, overflow: 'hidden', border: '1px solid var(--bd-line)' }}>
@@ -42,7 +42,7 @@ function Pricing({ onBook }) {
             display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'
           }}>
             <span className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Sprechstunden-Preise</span>
-            <span className="meta" style={{ fontFamily: 'var(--font-mono)' }}>Selbstzahler · inkl. MwSt.</span>
+            <span className="meta" style={{ fontFamily: 'var(--font-mono)' }}>Selbstzahler</span>
           </div>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {items.map((it, i) => (

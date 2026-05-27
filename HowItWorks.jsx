@@ -1,7 +1,6 @@
 /* global React, Icon, Button */
 
 function HowItWorks({ onBook }) {
-  const isMobile = useIsMobile();
   const steps = [
     {
       n: '01', icon: 'pencil-line',
@@ -27,9 +26,9 @@ function HowItWorks({ onBook }) {
           <h2>Drei Schritte zum Termin.</h2>
           <p>Ohne Anmeldung, ohne App-Download. Sie brauchen nur ein Smartphone oder einen Laptop mit Kamera.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {steps.map((s, i) => (
-            <div key={s.n} className="card" style={{ background: 'var(--bd-bg-2)', borderColor: 'transparent', boxShadow: 'none', padding: isMobile ? 24 : 32 }}>
+            <div key={s.n} className="card" style={{ background: 'var(--bd-bg-2)', borderColor: 'transparent', boxShadow: 'none', padding: 32 }}>
               <div className="spread" style={{ marginBottom: 24, alignItems: 'flex-start' }}>
                 <span style={{
                   fontFamily: 'var(--font-mono)', fontSize: 13, color: 'var(--bd-sage-700)',
@@ -49,7 +48,7 @@ function HowItWorks({ onBook }) {
           ))}
         </div>
         <div style={{ marginTop: 40, textAlign: 'center' }}>
-          <Button variant="primary" size="lg" onClick={onBook} iconRight="arrow-right">Jetzt Symptome schildern</Button>
+          <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Jetzt Symptome schildern</Button>
         </div>
       </div>
     </section>

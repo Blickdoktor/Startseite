@@ -8,7 +8,7 @@ function Faq() {
     },
     {
       q: 'Was kostet eine Sprechstunde?',
-      a: 'Wir arbeiten mit transparenten Festpreisen von 29 € bis 89 € — je nach Anliegen. Den genauen Preis sehen Sie vor der Buchung. Die Sprechstunde ist eine Selbstzahler-Leistung.'
+      a: 'Jede Sprechstunde kostet 25,47 €. Den Preis sehen Sie vor der Buchung. Die Sprechstunde ist eine Selbstzahler-Leistung.'
     },
     {
       q: 'Kann ich ein Rezept oder eine Krankschreibung bekommen?',
@@ -30,7 +30,7 @@ function Faq() {
   const [open, setOpen] = React.useState(0);
   return (
     <section className="section">
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'flex-start' }}>
+      <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'flex-start' }}>
         <div className="section-head" style={{ position: 'sticky', top: 96 }}>
           <span className="eyebrow">FAQ</span>
           <h2>Häufige Fragen.</h2>
@@ -46,7 +46,7 @@ function Faq() {
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   cursor: 'pointer', color: 'var(--fg-1)', textAlign: 'left'
                 }}>
-                  <span style={{ fontFamily: 'var(--font-serif)', fontSize: 21, letterSpacing: '-0.01em' }}>{it.q}</span>
+                  <span className="faq-question-text" style={{ fontFamily: 'var(--font-serif)', fontSize: 21, letterSpacing: '-0.01em' }}>{it.q}</span>
                   <span style={{
                     color: 'var(--fg-3)', transition: 'transform 220ms', flex: 'none',
                     transform: isOpen ? 'rotate(45deg)' : 'rotate(0)'
