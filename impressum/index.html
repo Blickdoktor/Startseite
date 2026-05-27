@@ -13,10 +13,12 @@
   .prose { max-width: 720px; margin: 0 auto; }
   .prose h1 { font-family: var(--font-serif); font-size: 48px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 32px; }
   .prose h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 400; letter-spacing: -0.01em; margin: 48px 0 16px; color: var(--bd-ink); }
+  .prose h3 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; color: var(--bd-ink); }
   .prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
   .prose a  { color: var(--bd-blue-700); }
   @media (max-width: 768px) {
     .prose h1 { font-size: 32px; }
+    .prose h2 { font-size: 22px; }
   }
 </style>
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
@@ -44,26 +46,54 @@ function App() {
               <span className="eyebrow">Rechtliches</span>
               <h1>Impressum</h1>
 
-              <h2>Dienstanbieter</h2>
+              <h2>Angaben gemäß § 5 TMG</h2>
               <p>
-                Dienstanbieter dieses Onlineangebotes und gemäß § 7 TMG für den Inhalt dieser Site verantwortlich ist:
+                Fachärztin für Augenheilkunde<br/>
+                Dr. med. Evrim Oehmichen, FEBO<br/>
+                Ligusterweg 1<br/>
+                53127 Bonn
               </p>
+
+              <h2>Kontakt</h2>
               <p>
-                Dr. med. Evrim Oehmichen<br/>
-                E-Mail: <a href="mailto:kontakt@blickdoktor.de">kontakt@blickdoktor.de</a><br/>
-                Web: <a href="https://www.blickdoktor.de" target="_blank" rel="noopener">www.blickdoktor.de</a>
+                Telefon: 0174 3615530<br/>
+                E-Mail: <a href="mailto:kontakt@blickdoktor.de">kontakt@blickdoktor.de</a>
+              </p>
+
+              <h2>Aufsichtsbehörde</h2>
+              <p>
+                Kassenärztliche Vereinigung Nordrhein<br/>
+                Tersteegenstr. 9<br/>
+                40474 Düsseldorf<br/>
+                <a href="https://www.kvno.de/" target="_blank" rel="noopener">www.kvno.de</a>
+              </p>
+
+              <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+              <p>
+                Berufsbezeichnung: Ärztin<br/>
+                Zuständige Kammer: Ärztekammer Nordrhein<br/>
+                Verliehen durch: NRW, Bundesrepublik Deutschland<br/>
+                Es gelten folgende berufsrechtliche Regelungen: Berufsrechtliche Berufsordnung für Ärzte<br/>
+                Regelungen einsehbar unter: <a href="https://www.aekno.de/page.asp?pageID=57" target="_blank" rel="noopener">www.aekno.de</a>
+              </p>
+
+              <h2>Angaben zur Berufshaftpflichtversicherung</h2>
+              <p>
+                Name und Sitz des Versicherers:<br/>
+                Deutsche Ärzteversicherung Allgemeine, AXA Vers. AG<br/>
+                51171 Köln<br/>
+                Geltungsraum der Versicherung: Deutschland
               </p>
 
               <h2>Redaktionell verantwortlich</h2>
               <p>
-                Redaktionell und inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV ist Dr. med. Evrim Oehmichen.
+                Editorisch und verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:<br/>
+                Dr. med. Evrim Oehmichen
               </p>
 
-              <h2>Weitere Informationen</h2>
               <p>
                 Weitere Informationen zur Nutzung von Blickdoktor finden Sie in unserer{' '}
                 <a href="/Startseite/datenschutzerklaerung/">Datenschutzerklärung</a>.
-                Die Datenschutzrichtlinien beschreiben den Umgang mit persönlichen Daten.
               </p>
             </div>
           </div>
