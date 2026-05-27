@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Datenschutzerklärung — Blickdoktor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blickdoktor.github.io/Startseite/datenschutzerklaerung/">
+<link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose h1 { font-family: var(--font-serif); font-size: 48px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 16px; }
+  .prose h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 400; letter-spacing: -0.01em; margin: 48px 0 16px; color: var(--bd-ink); }
+  .prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+  .prose ul { list-style: disc; padding-left: 24px; margin: 0 0 16px; color: var(--fg-2); font-size: 16px; line-height: 1.65; }
+  .prose a  { color: var(--bd-blue-700); }
+  .prose .lead { font-size: 18px; color: var(--fg-2); line-height: 1.55; margin-bottom: 32px; }
+  @media (max-width: 768px) {
+    .prose h1 { font-size: 32px; }
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react" src="../ui.jsx"></script>
+<script type="text/babel" data-presets="react" src="../Header.jsx"></script>
+<script type="text/babel" data-presets="react" src="../Footer.jsx"></script>
+<script type="text/babel" data-presets="react">
+/* global React, ReactDOM, Header, Footer */
+const ETERMIN_URL = 'https://www.etermin.net/blickdoktor';
+function App() {
+  const onBook = () => window.open(ETERMIN_URL, '_blank', 'noopener');
+  return (
+    <>
+      <Header onBook={onBook} />
+      <main>
+        <section className="section">
+          <div className="container">
+            <div className="prose">
+              <span className="eyebrow">Rechtliches</span>
+              <h1>Datenschutzerklärung</h1>
+              <p className="lead">
+                Liebe Besucherin, lieber Besucher dieser Website, der Schutz Ihrer personenbezogenen Daten ist nicht nur Ihnen, sondern auch uns, den gemeinsam Verantwortlichen des Online-Portals „Blickdoktor" (im Folgenden „wir", „uns"), ein großes Anliegen. Ihre Daten werden bei uns vertraulich behandelt.
+              </p>
+ 
+              <h2>Informationen zur Notwendigkeit des „Local Storage"</h2>
+              <p>Wenn Sie unsere Website öffnen, wird der Cookie-Banner angezeigt. Für die Verwaltung dieses Cookie-Banners, also die Verwaltung Ihrer Einwilligungen, ist es technisch notwendig, ein Cookie auf Ihrem Endgerät zu setzen.</p>
+              <p>Es wird ein einziges Cookie auf Ihrem Endgerät gespeichert, das Informationen dazu enthält, ob und in welche nicht technisch notwendigen Cookies Sie eingewilligt haben. Die Speicherdauer beträgt 12 Monate.</p>
+              <p>Die Rechtsgrundlage für das Setzen des technisch notwendigen Cookies ist unsere gesetzliche Verpflichtung gem. Art. 6 Abs. 1 UAbs. 1 lit. c i. V. m. Art. 5 Abs. 2 und Art. 7 Abs. 1 DS‑GVO.</p>
+ 
+              <h2>Verarbeitungen im Zusammenhang mit der Server-Wartung</h2>
+              <p>Wenn Sie unsere Website aufrufen, werden folgende Daten verarbeitet, um einen reibungslosen Betrieb zu gewährleisten:</p>
+              <ul>
+                <li>IP-Adresse Ihres Endgeräts</li>
+                <li>Datum und Uhrzeit Ihres Zugriffs</li>
+                <li>Inhalt Ihrer Anforderung (aufgerufene Seiten)</li>
+                <li>Name und URL der abgerufenen Dateien</li>
+                <li>Referrer-URL, verwendeter Browser, Betriebssystem</li>
+              </ul>
+              <p>Rechtsgrundlage: Art. 6 Abs. 1 UAbs. 1 lit. f DS‑GVO (berechtigtes Interesse). Die Daten werden nach 30 Tagen automatisch gelöscht. Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland.</p>
+ 
+              <h2>Verarbeitungen im Zusammenhang mit Google Analytics</h2>
+              <p>Um unser Webangebot zu optimieren, analysieren wir Ihr Nutzerverhalten mittels Google Analytics. Im Falle Ihrer Einwilligung werden Zugriffzeit, Zugriffsort, Spracheinstellungen und Gerätedaten erhoben. Die Funktion „IP-Anonymisierung" ist aktiviert.</p>
+              <p>Rechtsgrundlage: Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS‑GVO. Speicherdauer: 14 Monate. Die Daten werden an Google Ireland Ltd. und Google LLC, USA, übermittelt (Standarddatenschutzklauseln gem. Art. 46 DS‑GVO).</p>
+ 
+              <h2>Verarbeitungen im Zusammenhang mit Google Ads</h2>
+              <p>Wir nutzen Conversion-Tracking-Cookies von Google Ads. Im Falle Ihrer Einwilligung werden Daten zum Sichtkontakt mit Werbeanzeigen sowie demographische Daten erhoben. Speicherdauer der Cookies: 30 Tage; verarbeitete Daten: 24 Monate.</p>
+ 
+              <h2>Verarbeitungen bei Kontaktaufnahme per E-Mail</h2>
+              <p>Über die auf unserer Website angegebenen E-Mail-Adressen haben Sie die Möglichkeit, mit uns in Kontakt zu treten. Wir verarbeiten Ihre E-Mail-Adresse sowie die von Ihnen freiwillig übermittelten Informationen. Rechtsgrundlage: Art. 6 Abs. 1 UAbs. 1 lit. b DS‑GVO. <strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per E-Mail.</strong></p>
+ 
+              <h2>Ihre Rechte</h2>
+              <p>Sie haben das Recht auf Auskunft (Art. 15 DS‑GVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21 DS‑GVO). Sie können Ihre Einwilligung jederzeit widerrufen per E-Mail an <a href="mailto:info@blickdoktor.com">info@blickdoktor.com</a>. Beschwerden richten Sie an die Landesbeauftragte für den Datenschutz.</p>
+ 
+              <h2>Datensicherheit</h2>
+              <p>Unsere Website nutzt SSL-Verschlüsselung (in der Regel 256-Bit). Die Datenübertragung ist durch das Schloss-Symbol in der Browserleiste erkennbar.</p>
+ 
+              <h2>Aktualität</h2>
+              <p>Diese Datenschutzerklärung hat den Stand Februar 2022 und kann bei technischen Weiterentwicklungen angepasst werden.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer onBook={onBook} />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
