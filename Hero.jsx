@@ -1,4 +1,4 @@
-/* global React, Icon, Button, Badge, Logo, useIsMobile */
+/* global React, Icon, Button, Badge, Logo */
 
 function Hero({ variant = 'A', onBook }) {
   if (variant === 'A') return <HeroSplit onBook={onBook} />;
@@ -36,15 +36,16 @@ function HeroSplit({ onBook }) {
             </div>
           </div>
         </div>
-        {!isMobile && <HeroIllustration />}
+        <HeroIllustration />
       </div>
     </section>
   );
 }
 
 function HeroIllustration() {
+  const isMobile = useIsMobile();
   return (
-    <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
+    <div style={{ position: 'relative', aspectRatio: isMobile ? '1/1' : '4/5', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-sage-50)' }}>
       <SignalflowEye />
       {/* Floating card: next available call */}
       <div style={{
@@ -55,7 +56,7 @@ function HeroIllustration() {
       }}>
         <div className="eyebrow" style={{ color: 'var(--bd-sage-700)', marginBottom: 6 }}>Nächster freier Anruf</div>
         <div style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--bd-ink)', letterSpacing: '-0.01em' }}>In ca. 8 Minuten</div>
-        <div className="meta" style={{ marginTop: 4 }}>Dr. med. Evrim Oehmichen · Anruf</div>
+        <div className="meta" style={{ marginTop: 4 }}>Dr. med. Lena Vogt · Anruf</div>
       </div>
     </div>
   );
@@ -152,7 +153,6 @@ function SignalflowEye() {
   return (
     <svg
       viewBox="0 0 400 500"
-      preserveAspectRatio="xMidYMid slice"
       style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Animierte Darstellung: aus verstreuten Lichtpunkten formt sich ein klar fokussiertes Auge."

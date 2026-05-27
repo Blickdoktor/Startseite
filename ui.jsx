@@ -3,19 +3,6 @@
 
 // (hooks accessed via React.* to avoid global name collisions across files)
 
-// Responsive hook — returns true when viewport ≤ bp
-function useIsMobile(bp = 768) {
-  const [m, setM] = React.useState(() => window.innerWidth < bp);
-  React.useEffect(() => {
-    const mq = window.matchMedia(`(max-width: ${bp - 1}px)`);
-    const h = (e) => setM(e.matches);
-    mq.addEventListener('change', h);
-    setM(mq.matches);
-    return () => mq.removeEventListener('change', h);
-  }, [bp]);
-  return m;
-}
-
 // Lucide icon — renders the named icon as SVG using the global lucide.icons table.
 function Icon({ name, size = 20, strokeWidth = 1.5, className = '', style }) {
   const ref = React.useRef(null);
@@ -71,9 +58,20 @@ function Field({ label, hint, error, children }) {
 }
 
 function Logo({ inverse = false, height = 28 }) {
-  const base = 'https://blickdoktor.github.io/Startseite/';
-  const src = inverse ? base + 'logo-wordmark-inverse.svg' : base + 'logo-wordmark.svg';
+  const src = inverse ? '../../assets/logo-wordmark-inverse.svg' : '../../assets/logo-wordmark.svg';
   return <img src={src} alt="Blickdoktor" style={{ height, width: 'auto' }} />;
+}
+
+function useIsMobile(bp = 768) {
+  const [m, setM] = React.useState(() => window.innerWidth < bp);
+  React.useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${bp - 1}px)`);
+    const h = (e) => setM(e.matches);
+    mq.addEventListener('change', h);
+    setM(mq.matches);
+    return () => mq.removeEventListener('change', h);
+  }, [bp]);
+  return m;
 }
 
 Object.assign(window, { Icon, Button, Badge, Field, Logo, useIsMobile });

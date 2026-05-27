@@ -12,7 +12,7 @@ function Pricing({ onBook }) {
   ];
   return (
     <section id="preise" className="section">
-      <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
+      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
         <div className="section-head" style={{ position: 'sticky', top: 96 }}>
           <span className="eyebrow">Preise</span>
           <h2>Transparent, ab 29 €.</h2>
@@ -42,7 +42,7 @@ function Pricing({ onBook }) {
             display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'
           }}>
             <span className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Sprechstunden-Preise</span>
-            <span className="meta" style={{ fontFamily: 'var(--font-mono)' }}>Selbstzahler</span>
+            <span className="meta" style={{ fontFamily: 'var(--font-mono)' }}>Selbstzahler · inkl. MwSt.</span>
           </div>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
             {items.map((it, i) => (
