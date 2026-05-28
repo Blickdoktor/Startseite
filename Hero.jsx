@@ -13,7 +13,7 @@ function HeroSplit({ onBook }) {
       <div className="container hero-split-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
         <div className="stack-6">
           <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
-          <h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
+          <h1 className="display-l" style={{ margin: 0, fontSize: 'clamp(26px, 6vw, 64px)' }}>
             Augenarzt-Sprechstunde,<br/>
             <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>in wenigen Minuten.</span>
           </h1>
