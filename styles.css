@@ -240,3 +240,15 @@ ul { margin: 0; padding: 0; list-style: none; }
     display: none;
   }
 }
+/* ── Mobile Hero Fix ── */
+@media (max-width: 768px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-split-grid > *:last-child {
+    display: none;
+  }
+  #top {
+    padding-bottom: 32px !important;
+  }
+}
