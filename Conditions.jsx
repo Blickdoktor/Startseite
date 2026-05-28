@@ -23,7 +23,7 @@ function Conditions({ onBook }) {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 16 }}>
           {items.map(it => (
-            <button key={it.title} onClick={onBook} className="card card-interactive" style={{
+            <a key={it.title} href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" className="card card-interactive" style={{ display: 'block', textDecoration: 'none', color: 'inherit',
               textAlign: 'left', cursor: 'pointer', border: '1px solid var(--bd-line)'
             }}>
               <div className="spread" style={{ alignItems: 'flex-start', marginBottom: 16 }}>
@@ -38,7 +38,7 @@ function Conditions({ onBook }) {
               </div>
               <h3 style={{ margin: '0 0 6px', fontSize: 20 }}>{it.title}</h3>
               <p style={{ margin: 0, color: 'var(--fg-2)', fontSize: 14.5, lineHeight: 1.55 }}>{it.body}</p>
-            </button>
+            </a>
           ))}
         </div>
         <EmergencyNotice />
