@@ -68,7 +68,7 @@ function Header({ onBook }) {
         )}
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Button variant="primary" size="sm" onClick={onBook} iconRight="arrow-right">
+          <Button variant="primary" size="sm" onClick={() => window.open('https://www.etermin.net/blickdoktor', '_blank')} iconRight="arrow-right">
             Termin vereinbaren
           </Button>
 
