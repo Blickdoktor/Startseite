@@ -1,123 +1,436 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<title>Datenschutzerklärung — Blickdoktor</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://blickdoktor.github.io/Startseite/datenschutzerklaerung/">
-<link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../colors_and_type.css">
-<link rel="stylesheet" href="../styles.css">
-<style>
-  .prose { max-width: 720px; margin: 0 auto; }
-  .prose h1 { font-family: var(--font-serif); font-size: 48px; font-weight: 350; letter-spacing: -0.02em; margin: 0 0 16px; }
-  .prose h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 400; letter-spacing: -0.01em; margin: 48px 0 16px; color: var(--bd-ink); }
-  .prose h3 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; color: var(--bd-ink); }
-  .prose p  { color: var(--fg-2); font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
-  .prose ul { list-style: disc; padding-left: 24px; margin: 0 0 16px; color: var(--fg-2); font-size: 16px; line-height: 1.65; }
-  .prose a  { color: var(--bd-blue-700); }
-  .prose .lead { font-size: 18px; color: var(--fg-2); line-height: 1.55; margin-bottom: 32px; }
-  @media (max-width: 768px) {
-    .prose h1 { font-size: 32px; }
-    .prose h2 { font-size: 22px; }
-  }
-</style>
-<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+  <meta charset="utf-8">
+  <title>Datenschutzerklärung | Blickdoktor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blickdoktor.github.io/Startseite/datenschutzerklaerung/">
+  <link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .dse-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+    .dse-wrap h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 350;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin: 0 0 48px;
+      color: var(--bd-blue-900);
+    }
+    .dse-wrap h2 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin: 48px 0 16px;
+      color: var(--bd-blue-900);
+    }
+    .dse-wrap h3 {
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 10px;
+      color: var(--bd-blue-700);
+    }
+    .dse-wrap p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--bd-blue-800, #1e3a5f);
+      margin: 0 0 16px;
+    }
+    .dse-wrap ul {
+      padding-left: 24px;
+      margin: 0 0 16px;
+    }
+    .dse-wrap ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--bd-blue-800, #1e3a5f);
+      margin-bottom: 8px;
+    }
+    .dse-wrap a {
+      color: var(--bd-blue-700);
+    }
+    .dse-intro {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--bd-blue-800, #1e3a5f);
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--bd-neutral-200, #e8e4de);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--bd-blue-700);
+      text-decoration: none;
+      margin-bottom: 48px;
+    }
+    .back-link:hover { text-decoration: underline; }
+    /* Focus */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--bd-blue-700) !important;
+      outline-offset: 2px !important;
+    }
+  </style>
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
 </head>
 <body>
-<div id="root"></div>
+
+<div id="root">
+  <!-- Pre-Rendered Content -->
+  <header>
+    <nav aria-label="Hauptnavigation">
+      <a href="/Startseite/">Blickdoktor</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <h1>Datenschutzerklärung</h1>
+  </main>
+  <footer>
+    <p>© 2026 Blickdoktor GmbH</p>
+  </footer>
+</div>
+
+<!-- Components -->
 <script type="text/babel" data-presets="react" src="../ui.jsx"></script>
 <script type="text/babel" data-presets="react" src="../Header.jsx"></script>
 <script type="text/babel" data-presets="react" src="../Footer.jsx"></script>
+
 <script type="text/babel" data-presets="react">
 /* global React, ReactDOM, Header, Footer */
-const ETERMIN_URL = 'https://www.etermin.net/blickdoktor';
-function App() {
-  const onBook = () => window.open(ETERMIN_URL, '_blank', 'noopener');
+
+function DatenschutzPage() {
   return (
     <>
-      <Header onBook={onBook} />
-      <main>
-        <section className="section">
-          <div className="container">
-            <div className="prose">
-              <span className="eyebrow">Rechtliches</span>
-              <h1>Datenschutzerklärung</h1>
-              <p className="lead">
-                Liebe Besucherin, lieber Besucher dieser Website, der Schutz Ihrer personenbezogenen Daten ist nicht nur Ihnen, sondern auch uns, den gemeinsam Verantwortlichen des Online-Portals „Blickdoktor" (im Folgenden „wir", „uns"), ein großes Anliegen. Ihre Daten werden bei uns vertraulich behandelt.
-              </p>
-              <p>Mit diesen Datenschutzhinweisen möchten wir nicht nur unserer gesetzlichen Pflicht aus Art. 13 und 14 DS-GVO nachkommen, sondern Ihnen verständlich beschreiben, welche personenbezogenen Daten beim Besuch unserer Website erhoben werden und wie wir mit ihnen umgehen.</p>
+      <Header />
+      <main id="main-content">
+        <div className="dse-wrap">
+          <a href="/Startseite/" className="back-link">← Zurück zur Startseite</a>
 
-              <h2>Informationen zur Notwendigkeit des „Local Storage"</h2>
-              <h3>Zwecke</h3>
-              <p>Wenn Sie unsere Website öffnen, wird der Cookie-Banner angezeigt. Für die Verwaltung dieses Cookie-Banners, also die Verwaltung Ihrer Einwilligungen, ist es technisch notwendig, ein Cookie auf Ihrem Endgerät zu setzen.</p>
-              <h3>Datenarten</h3>
-              <p>Es wird ein einziges Cookie auf Ihrem Endgerät gespeichert, das Informationen dazu enthält, ob und in welche nicht technisch notwendigen Cookies Sie eingewilligt haben.</p>
-              <h3>Rechtsgrundlage</h3>
-              <p>Die Rechtsgrundlage für das Setzen des technisch notwendigen Cookies ist unsere gesetzliche Verpflichtung gem. Art. 6 Abs. 1 UAbs. 1 lit. c i. V. m. Art. 5 Abs. 2 und Art. 7 Abs. 1 DS-GVO.</p>
-              <h3>Speicherdauer</h3>
-              <p>Die Speicherdauer beträgt 12 Monate.</p>
-              <h3>Empfänger</h3>
-              <p>Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland für die Bereitstellung unserer Website.</p>
+          <h1>Datenschutzerklärung</h1>
 
-              <h2>Verarbeitungen im Zusammenhang mit der Server-Wartung</h2>
-              <h3>Zwecke</h3>
-              <p>Wenn Sie unsere Website aufrufen, werden die unten genannten auf Sie beziehbaren Daten verarbeitet, um einen reibungslosen Verbindungsaufbau, eine komfortable Nutzung unserer Website, die Auswertung der Systemsicherheit und Systemstabilität sowie weitere administrative Zwecke zu gewährleisten.</p>
-              <h3>Datenarten</h3>
-              <ul>
-                <li>IP-Adresse Ihres Endgeräts</li>
-                <li>Datum und Uhrzeit Ihres Zugriffs</li>
-                <li>Inhalt Ihrer Anforderung (aufgerufene Seiten)</li>
-                <li>Name und URL der abgerufenen Dateien</li>
-                <li>Referrer-URL, verwendeter Browser, Betriebssystem</li>
-                <li>Name Ihres Access-Providers</li>
-                <li>Spracheinstellungen und Browserversion</li>
-                <li>Zeitzonendifferenz zur GMT</li>
-                <li>Zugriffsstatus/HTTP-Statuscode</li>
-              </ul>
-              <h3>Rechtsgrundlage</h3>
-              <p>Art. 6 Abs. 1 UAbs. 1 lit. f DS-GVO (berechtigtes Interesse). Die Daten werden nach 30 Tagen automatisch gelöscht.</p>
-              <h3>Empfänger</h3>
-              <p>Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland.</p>
-
-              <h2>Verarbeitungen im Zusammenhang mit Google Analytics</h2>
-              <p>Um unser Webangebot zu optimieren, analysieren wir Ihr Nutzerverhalten mittels Google Analytics. Im Falle Ihrer Einwilligung werden Zugriffszeit, Zugriffsort, Spracheinstellungen und Gerätedaten erhoben. Die Funktion „IP-Anonymisierung" ist aktiviert.</p>
-              <p>Rechtsgrundlage: Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS-GVO. Speicherdauer: 14 Monate. Die Daten werden an Google Ireland Ltd. und Google LLC, USA, übermittelt (Standarddatenschutzklauseln gem. Art. 46 DS-GVO).</p>
-
-              <h2>Verarbeitungen im Zusammenhang mit Google Ads</h2>
-              <p>Wir nutzen Conversion-Tracking-Cookies von Google Ads. Im Falle Ihrer Einwilligung werden Daten zum Sichtkontakt mit Werbeanzeigen sowie demographische Daten erhoben. Speicherdauer der Cookies: 30 Tage; verarbeitete Daten: 24 Monate.</p>
-              <p>Die Daten werden an Google Ireland Ltd. und Google LLC, USA, übermittelt (Auftragsverarbeitungsvertrag gem. Art. 28 Abs. 3 DS-GVO, Standarddatenschutzklauseln gem. Art. 46 DS-GVO).</p>
-
-              <h2>Verarbeitungen bei Kontaktaufnahme per E-Mail</h2>
-              <p>Über die auf unserer Website angegebenen E-Mail-Adressen haben Sie die Möglichkeit, mit uns in Kontakt zu treten. Wir verarbeiten Ihre E-Mail-Adresse sowie die von Ihnen freiwillig übermittelten Informationen. Rechtsgrundlage: Art. 6 Abs. 1 UAbs. 1 lit. b DS-GVO.</p>
-              <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per E-Mail.</strong></p>
-
-              <h2>Verarbeitungen bei Kontaktaufnahme per Chat</h2>
-              <p>Sie haben die Möglichkeit, auf unserer Website über eine Chat-Funktion mit uns in Kontakt zu treten. Dabei verarbeiten wir Ihre IP-Adresse, den Zeitpunkt Ihrer Anfrage, das verwendete Betriebssystem, die Browserart und die URL der zuvor besuchten Unterseite.</p>
-              <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per Chat.</strong></p>
-
-              <h2>Ihre Rechte</h2>
-              <p>Sie haben das Recht auf Auskunft (Art. 15 DS-GVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21 DS-GVO). Sie können Ihre Einwilligung jederzeit widerrufen per E-Mail an <a href="mailto:info@blickdoktor.com">info@blickdoktor.com</a>.</p>
-              <p>Beschwerden richten Sie an die Landesbeauftragte für den Datenschutz Nordrhein-Westfalen.</p>
-
-              <h2>Datensicherheit</h2>
-              <p>Unsere Website nutzt SSL-Verschlüsselung (in der Regel 256-Bit). Die Datenübertragung ist durch das Schloss-Symbol in der Browserleiste erkennbar.</p>
-
-              <h2>Aktualität</h2>
-              <p>Diese Datenschutzerklärung hat den Stand Februar 2022 und kann bei technischen Weiterentwicklungen angepasst werden.</p>
-            </div>
+          <div className="dse-intro">
+            <p>
+              Liebe Besucherin, lieber Besucher dieser Website,
+            </p>
+            <p>
+              der Schutz Ihrer personenbezogenen Daten ist nicht nur Ihnen, sondern auch uns, den gemeinsam Verantwortlichen des Online-Portals „Blickdoktor" (im Folgenden „wir", „uns"), ein großes Anliegen. Wir wissen Ihr Vertrauen darin, dass wir mit Ihren personenbezogenen Daten gewissenhaft und gesetzeskonform umgehen, zu schätzen. Ihre Daten werden bei uns vertraulich behandelt.
+            </p>
+            <p>
+              Mit diesen Datenschutzhinweisen möchten wir nicht nur unserer gesetzlichen Pflicht aus Art. 13 und 14 DS‑GVO nachkommen, sondern Ihnen verständlich beschreiben, welche personenbezogenen Daten beim Besuch unserer Website erhoben werden und wie wir mit ihnen umgehen.
+            </p>
           </div>
-        </section>
+
+          {/* ── Cookie-Banner ── */}
+          <h2>Informationen zur Notwendigkeit des „Local Storage"</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Wenn Sie unsere Website öffnen, wird der Cookie-Banner angezeigt. Für die Verwaltung dieses Cookie-Banners, also die Verwaltung Ihrer Einwilligungen, ist es technisch notwendig, ein Cookie auf Ihrem Endgerät zu setzen.
+          </p>
+
+          <h3>Datenarten</h3>
+          <p>
+            Es wird ein einziges Cookie auf Ihrem Endgerät gespeichert, das Informationen dazu beinhaltet, ob und in welche nicht technisch notwendigen Cookies Sie eingewilligt haben.
+          </p>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die Rechtsgrundlage für das Setzen des technisch notwendigen Cookies ist unsere gesetzliche Verpflichtung, Ihre Einwilligungen zu verwalten und nachweisen zu können gem. Art. 6 Abs. 1 UAbs. 1 lit. c i. V. m. Art. 5 Abs. 2 und Art. 7 Abs. 1 DS‑GVO.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Die Speicherdauer beträgt 12 Monate. Der „Local Storage" kann jederzeit über die Browser-Einstellung gelöscht werden.
+          </p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland für die Bereitstellung unserer Website.
+          </p>
+
+          {/* ── Server-Wartung ── */}
+          <h2>Verarbeitungen in Zusammenhang mit unserer Server-Wartung</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Wenn Sie unsere Website aufrufen, werden die unten genannten auf Sie beziehbaren Daten, die der auf Ihrem Endgerät (Mobiltelefon, Laptop, PC o. ä.) zum Einsatz kommende Browser an den Server unserer Website sendet, zu folgenden Zwecken verarbeitet:
+          </p>
+          <ul>
+            <li>die Gewährleistung eines reibungslosen Verbindungsaufbaus der Website,</li>
+            <li>die Gewährleistung einer komfortablen Nutzung unserer Website,</li>
+            <li>die Auswertung der Systemsicherheit und Systemstabilität sowie</li>
+            <li>zu weiteren administrativen Zwecken.</li>
+          </ul>
+
+          <h3>Datenarten</h3>
+          <p>Nachfolgende Daten werden verarbeitet:</p>
+          <ul>
+            <li>die IP-Adresse Ihres Endgeräts,</li>
+            <li>das Datum und die Uhrzeit Ihres Zugriffs,</li>
+            <li>der Inhalt Ihrer Anforderung (konkrete Webseiten, die von Ihnen angesteuert werden),</li>
+            <li>der Name und die URL der von Ihnen abgerufenen Dateien,</li>
+            <li>die Website, von der aus Ihr Zugriff erfolgt (Referrer-URL),</li>
+            <li>der von Ihnen verwendete Browser,</li>
+            <li>das Betriebssystem Ihres Endgerätes,</li>
+            <li>der Name Ihres Access-Providers,</li>
+            <li>die Spracheinstellungen der von Ihrem Endgerät verwendeten Browsersoftware,</li>
+            <li>die Version der von Ihrem Endgerät verwendeten Browsersoftware,</li>
+            <li>die Zeitzonendifferenz zur Greenwich Mean Time (GMT) Ihres Endgeräts,</li>
+            <li>der Zugriffsstatus/HTTP-Statuscode.</li>
+          </ul>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die vorgenannte Verarbeitung basiert auf der Rechtsgrundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 UAbs. 1 lit. f DS‑GVO. Unser berechtigtes Interesse ergibt sich aus den vorstehend genannten Zwecken der Verarbeitung.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Die oben genannten auf Sie beziehbaren Daten werden temporär in einem sogenannten Logfile (Protokoll-Datei) auf unserem Server gespeichert und nach 30 Tagen automatisiert gelöscht.
+          </p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland für die Bereitstellung unserer Website.
+          </p>
+
+          <h3>Ihr Recht auf Widerspruch</h3>
+          <p>
+            Sie haben gem. Art. 21 DS‑GVO das Recht auf Widerspruch gegen die oben beschriebene Verarbeitung der auf Sie bezogenen Daten, wenn Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben oder Ihr Widerspruch gegen Direktwerbung gerichtet ist.
+          </p>
+
+          {/* ── Google Analytics ── */}
+          <h2>Verarbeitungen im Zusammenhang mit der Verhaltensanalyse Ihres Website-Besuches mittels Google Analytics</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Um unser Webangebot und unsere Werbung zu optimieren, analysieren wir Ihr Nutzerverhalten mittels Funktionen des Webanalysedienstes Google Analytics. In unserem Auftrag wertet Google die unten genannten auf Sie beziehbaren Daten aus, um für uns Berichte über Ihre Aktivitäten auf unserer Website zusammenzustellen.
+          </p>
+
+          <h3>Datenarten</h3>
+          <p>Im Falle Ihrer Einwilligung werden folgende Daten erhoben:</p>
+          <ul>
+            <li>Ihre Zugriffszeit auf unsere Website,</li>
+            <li>Ihr Zugriffsort bei Besuch unserer Website,</li>
+            <li>inwiefern Sie unsere Website gerade aktiv nutzen,</li>
+            <li>ob Sie ein wiederkehrender Besucher unserer Website sind,</li>
+            <li>die Sprache, das Gerätemodell und die Plattform (z. B. iOS oder Android) Ihres Endgeräts.</li>
+          </ul>
+          <p>
+            Wir haben hinsichtlich Google Analytics die Funktion „IP-Anonymisierung" aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union vor der Übermittlung in die USA gekürzt.
+          </p>
+          <p>
+            Wir nutzen die Funktion „demografische Merkmale" von Google Analytics. Dadurch können Berichte erstellt werden, die Aussagen zu Alter, Geschlecht und Interessen der Seitenbesucher enthalten.
+          </p>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die Rechtsgrundlage dieser Verarbeitung ist Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS‑GVO.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>Die oben genannten auf Sie beziehbaren Daten werden für 14 Monate gespeichert.</p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Die über Google Analytics verarbeiteten Daten werden an Google Ireland Ltd., Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland, und an Google LLC, 1600 Amphitheatre Parkway Mountain View, CA 94043, USA, übermittelt und in den USA verarbeitet. Google ist für diese Verarbeitung unser Auftragsverarbeiter. Die Rechtsgrundlage für die Drittlandübermittlung sind Standarddatenschutzklauseln gem. Art. 46 DS‑GVO. Mehr Informationen finden Sie unter{' '}
+            <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" rel="noopener">support.google.com/analytics/answer/6004245</a>.
+          </p>
+
+          <h3>Ihr Recht auf Widerruf Ihrer Einwilligung</h3>
+          <p>
+            Sie haben das Recht, Ihre Einwilligung jederzeit zu widerrufen. Die Rechtmäßigkeit der aufgrund Ihrer Einwilligung bis zum Widerruf erfolgten Verarbeitung wird davon nicht berührt.
+          </p>
+
+          {/* ── Google Ads ── */}
+          <h2>Verarbeitungen im Zusammenhang mit der Nutzerverhaltensanalyse mittels Google Ads</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Wir nutzen Conversion-Tracking-Cookies von Google Ads, um unsere Google-Ads-Kampagnen zu optimieren und ihren Erfolg zu messen.
+          </p>
+
+          <h3>Datenarten</h3>
+          <p>Es werden folgende Arten von Daten über Sie verarbeitet:</p>
+          <ul>
+            <li>Ihr letzter Sichtkontakt unserer Werbeanzeige,</li>
+            <li>die Anzahl der von Ihnen gesichteten und geklickten Werbeanzeigen pro Platzierung,</li>
+            <li>Ihre Unique-Cookie-ID,</li>
+            <li>die Sprache, das Gerätemodell und die Plattform (z. B. iOS oder Android) Ihres Endgeräts,</li>
+            <li>Ihre demographischen Daten (Geschlecht, Alter und Interessen).</li>
+          </ul>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die Rechtsgrundlage dieser Verarbeitung ist Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS‑GVO.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Die Speicherdauer der Cookies ist auf 30 Tage begrenzt. Die Speicherdauer Ihrer verarbeiteten Daten beträgt 24 Monate.
+          </p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Die über Google Ads verarbeiteten Daten werden an Google Ireland Ltd. und Google LLC, USA, übermittelt. Mehr Informationen finden Sie unter{' '}
+            <a href="https://privacy.google.com/intl/de/businesses/adsservices/" target="_blank" rel="noopener">privacy.google.com</a>.
+          </p>
+
+          {/* ── E-Mail ── */}
+          <h2>Verarbeitungen bei Kontaktaufnahme mit uns per E-Mail</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Über die auf unserer Website angegebenen E-Mail-Adressen haben Sie die Möglichkeit, mit uns in Kontakt zu treten.
+          </p>
+
+          <h3>Datenarten</h3>
+          <p>
+            Um Ihre Anfrage zu bearbeiten, verwenden wir die uns von Ihnen zur Verfügung gestellte E-Mail-Adresse bzw. Telefonnummer. Weitere Informationen erheben wir nur direkt bei Ihnen, wo sie notwendig und erheblich für die Beantwortung Ihrer Anfrage sind.
+          </p>
+          <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per E-Mail.</strong></p>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die Verarbeitung zum Zwecke der Kontaktaufnahme mit uns erfolgt gemäß Art. 6 Abs. 1 UAbs. 1 lit. b DS‑GVO.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Erfolgt die Kontaktaufnahme im Rahmen des Behandlungsvertrages, bewahren wir Ihre Informationen im Rahmen Ihrer Patientenakte für zehn Jahre gem. §§ 630a ff. BGB auf. Ansonsten löschen wir die erhobenen personenbezogenen Daten nach Erledigung der von Ihnen gestellten Anfrage.
+          </p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Wir nutzen einen deutschen Auftragsverarbeiter mit deutschem Serverstandort für die Bereitstellung unseres E-Mail-Servers.
+          </p>
+
+          {/* ── Chat ── */}
+          <h2>Verarbeitungen bei Kontaktaufnahme mit uns per Chat</h2>
+
+          <h3>Zwecke</h3>
+          <p>
+            Sie haben die Möglichkeit, auf unserer Website über eine Chat-Funktion mit uns in Kontakt zu treten.
+          </p>
+          <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per Chat.</strong></p>
+
+          <h3>Datenarten</h3>
+          <p>Um Ihre Anfrage zu bearbeiten, verarbeiten wir:</p>
+          <ul>
+            <li>Ihre IP-Adresse,</li>
+            <li>den Zeitpunkt Ihrer Anfrage,</li>
+            <li>das von Ihnen verwendete Betriebssystem,</li>
+            <li>die von Ihnen verwendete Browserart,</li>
+            <li>die URL unserer Website, auf der Sie die Chat-Funktion genutzt haben.</li>
+          </ul>
+
+          <h3>Rechtsgrundlage</h3>
+          <p>
+            Die Verarbeitung zum Zwecke der Kontaktaufnahme mit uns erfolgt gemäß Art. 6 Abs. 1 UAbs. 1 lit. b DS‑GVO.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Die im Rahmen der Kontaktaufnahme per Chat erhobenen personenbezogenen Daten werden nach Erledigung der von Ihnen gestellten Anfrage gelöscht.
+          </p>
+
+          <h3>Empfänger</h3>
+          <p>
+            Für die Bereitstellung unseres Chats setzen wir einen Auftragsverarbeiter mit Serverstandort in Deutschland ein.
+          </p>
+
+          {/* ── Ihre Rechte ── */}
+          <h2>Ihre Rechte im Zusammenhang mit unserer Verarbeitung Ihrer personenbezogenen Daten</h2>
+
+          <p>Sie haben das Recht,</p>
+          <ul>
+            <li>
+              nach <strong>Art. 15 DS‑GVO</strong> Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen;
+            </li>
+            <li>
+              nach <strong>Art. 16 DS‑GVO</strong> unverzüglich die Berichtigung unrichtiger oder die Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen;
+            </li>
+            <li>
+              nach <strong>Art. 17 DS‑GVO</strong> die Löschung Ihrer von uns gespeicherten Daten zu verlangen, soweit die Verarbeitung nicht zur Ausübung des Rechts auf freie Meinungsäußerung, zur Erfüllung einer rechtlichen Verpflichtung oder zur Geltendmachung von Rechtsansprüchen erforderlich ist;
+            </li>
+            <li>
+              nach <strong>Art. 18 DS‑GVO</strong> die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen;
+            </li>
+            <li>
+              nach <strong>Art. 20 DS‑GVO</strong> Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen;
+            </li>
+            <li>
+              nach <strong>Art. 7 Abs. 3 DS‑GVO</strong> Ihre einmal erteilte Einwilligung jederzeit uns gegenüber zu widerrufen;
+            </li>
+            <li>
+              nach <strong>Art. 77 DS‑GVO</strong> sich bei einer Aufsichtsbehörde zu beschweren. Die für unseren Sitz zuständige Aufsichtsbehörde ist die Landesbeauftragte für den Datenschutz Nordrhein-Westfalen.
+            </li>
+          </ul>
+
+          <h2>Ihr Recht zum Widerspruch</h2>
+          <p>
+            In den Fällen, in denen die Verarbeitung auf der Rechtsgrundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 UAbs. 1 lit. f DS‑GVO erfolgt, können Sie nach Art. 21 DS‑GVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einlegen, wenn Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben oder sich der Widerspruch gegen Direktwerbung richtet.
+          </p>
+          <p>
+            Im Falle des Widerspruchs gegen Direktwerbung haben Sie ein generelles Widerspruchsrecht, das ohne Angaben einer besonderen Situation von uns umgesetzt wird.
+          </p>
+
+          <h2>Widerruf Ihrer Einwilligungen</h2>
+          <p>
+            In jedem Fall der Verarbeitung aufgrund Ihrer nach Art. 6 Abs. 1 UAbs. 1 lit. a bzw. Art. 9 Abs. 2 lit. a DS‑GVO erteilten Einwilligung, können Sie Ihre Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung wird dadurch nicht berührt.
+          </p>
+          <p>
+            Sie können Ihre uns gegebenen Einwilligungen einfach durch eine E-Mail an{' '}
+            <a href="mailto:info@blickdoktor.com">info@blickdoktor.com</a> widerrufen.
+          </p>
+
+          <h2>Datenübermittlung</h2>
+          <p>
+            Grundsätzlich geben wir Ihre persönlichen Daten nicht an Dritte weiter. Dies geschieht nur dann, wenn Sie Ihre ausdrückliche Einwilligung erteilt haben, die Weitergabe zur Geltendmachung von Rechtsansprüchen erforderlich ist, eine gesetzliche Verpflichtung besteht oder die Weitergabe für die Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist.
+          </p>
+          <p>
+            Wir weisen Sie darauf hin, dass wir mit externen Dienstleistern Auftragsverarbeitungsverträge gem. Art. 28 DS‑GVO abgeschlossen haben. Bei der Auswahl dieser Auftragsverarbeiter haben wir sichergestellt, dass sie hinreichend Garantien dafür bieten, dass geeignete technische und organisatorische Maßnahmen so durchgeführt werden, dass die Verarbeitung im Einklang mit den Anforderungen des Datenschutzes steht.
+          </p>
+
+          <h2>Datensicherheit</h2>
+          <p>
+            Zur Gewährleistung der adäquaten Sicherheit der Verarbeitung Ihrer personenbezogenen Daten bedienen wir uns geeigneter technischer und organisatorischer Maßnahmen. Bei dem Besuch unserer Website kommt das SSL-Verfahren zum Einsatz, kombiniert mit der jeweils höchsten Verschlüsselungsstufe, die Ihr Browser unterstützt. Regelmäßig handelt es sich um eine 256-Bit-Verschlüsselung.
+          </p>
+          <p>
+            Mit unseren Auftragsverarbeitern entwickeln wir die technischen und organisatorischen Maßnahmen regelmäßig weiter und streben eine stete Verbesserung der Sicherheitsbedingungen für Ihre personenbezogenen Daten an.
+          </p>
+
+          <h2>Aktualität dieser Datenschutzerklärung</h2>
+          <p>
+            Diese Datenschutzerklärung ist gültig und hat den Stand Februar 2022. Da wir stets bestrebt sind, mit dem technischen Fortschritt zu gehen, entwickeln wir unsere Website und deren Angebote ebenso weiter, wie die technischen und organisatorischen Maßnahmen zum Schutz Ihrer Daten. In diesem Zusammenhang kann es nötig sein, auch die Datenschutzerklärung entsprechend anzupassen.
+          </p>
+        </div>
       </main>
-      <Footer onBook={onBook} />
+      <Footer />
     </>
   );
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+ReactDOM.createRoot(document.getElementById('root')).render(<DatenschutzPage />);
 </script>
+
 </body>
 </html>
