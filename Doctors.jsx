@@ -9,7 +9,8 @@ function Doctors() {
       focus: 'Gründerin von Blickdoktor',
       initials: 'EO',
       tone: 'sage',
-      href: '/Startseite/aerzte/dr-evrim-oehmichen/'
+      href: '/Startseite/aerzte/dr-evrim-oehmichen/',
+      photo: 'https://static.wixstatic.com/media/4b69d1_1b75da51fa70446c8c054b3b46e910e4~mv2.jpg'
     },
     {
       name: 'Vincent Oehmichen FEBO',
@@ -18,7 +19,8 @@ function Doctors() {
       focus: 'Augenheilkunde',
       initials: 'VO',
       tone: 'blue',
-      href: '/Startseite/aerzte/dr-vincent-oehmichen/'
+      href: '/Startseite/aerzte/dr-vincent-oehmichen/',
+      photo: null
     },
   ];
 
@@ -46,8 +48,13 @@ function Doctors() {
                   background: toneBg[d.tone], color: toneFg[d.tone],
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontFamily: 'var(--font-serif)', fontSize: 56, letterSpacing: '-0.02em',
-                  marginBottom: 16
-                }}>{d.initials}</div>
+                  marginBottom: 16, overflow: 'hidden'
+                }}>
+                  {d.photo
+                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    : d.initials
+                  }
+                </div>
                 <h3 style={{ margin: '0 0 4px', fontSize: 17, fontFamily: 'var(--font-sans)', fontWeight: 500 }}>{d.name}</h3>
                 <div className="meta" style={{ marginBottom: 4 }}>{d.role}</div>
                 <div className="meta" style={{ marginBottom: 10, fontSize: 13 }}>{d.roleExtra}</div>
