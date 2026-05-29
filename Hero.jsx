@@ -13,7 +13,7 @@ function HeroSplit({ onBook }) {
       <div className="container hero-split-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
         <div className="stack-6">
           <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
-          <h1 className="display-l" style={{ margin: 0, fontSize: 'clamp(26px, 6vw, 64px)' }}>
+          <h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
             Augenarzt-Sprechstunde,<br/>
             <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>in wenigen Minuten.</span>
           </h1>
@@ -25,10 +25,6 @@ function HeroSplit({ onBook }) {
             <Button variant="ghost" size="lg" as="a" href="#wie" icon="play">So funktioniert es</Button>
           </div>
           <div className="row" style={{ gap: 24, marginTop: 16 }}>
-            <div className="row-tight" style={{ gap: 8 }}>
-              <Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} />
-              <span className="meta" style={{ color: 'var(--fg-2)' }}><strong style={{ color: 'var(--fg-1)' }}>4,9</strong> · 2.140 Bewertungen</span>
-            </div>
             <div className="row-tight" style={{ gap: 8 }}>
               <Icon name="clock" size={16} style={{ color: 'var(--bd-success)' }} />
               <span className="meta">Anruf in der Regel innerhalb von 30 Minuten</span>
@@ -50,16 +46,15 @@ function HeroIllustration() {
 }
 
 /* ───────── SignalflowEye ─────────
-   „Augenlicht als Signalfluss": a cloud of points jitters chaotically,
-   then a single clay-coloured impulse sweeps left→right and orders them
-   into the silhouette of an eye. Symbolises Unsicherheit → schnelle
-   fachliche Klarheit. Pure SVG + rAF. Marine + sage with a single clay
-   accent — no rotation, no spring, motion stays inside the system's
-   gentle-ease + ≤1.03 scale rules. */
+„Augenlicht als Signalfluss": a cloud of points jitters chaotically,
+then a single clay-coloured impulse sweeps left→right and orders them
+into the silhouette of an eye. Symbolises Unsicherheit → schnelle
+fachliche Klarheit. Pure SVG + rAF. Marine + sage with a single clay
+accent — no rotation, no spring, motion stays inside the system's
+gentle-ease + ≤1.03 scale rules. */
 function SignalflowEye() {
   const [t, setT] = React.useState(0);
   const LOOP_MS = 6400;
-
   React.useEffect(() => {
     let raf, start;
     function tick(now) {
@@ -100,12 +95,12 @@ function SignalflowEye() {
       const r3 = seeded(i, 33.1);
       arr.push({
         tx, ty,
-        cr: 14 + r1 * 26,     // chaos drift radius
-        cp: r2 * Math.PI * 2, // chaos phase
-        cs: 0.6 + r3 * 0.9,   // chaos speed
-        delay: r1 * 0.10,     // cascade pickup
+        cr: 14 + r1 * 26,        // chaos drift radius
+        cp: r2 * Math.PI * 2,    // chaos phase
+        cs: 0.6 + r3 * 0.9,      // chaos speed
+        delay: r1 * 0.10,        // cascade pickup
         size: 1.8 + r2 * 1.4,
-        clay: r3 > 0.86,      // ~1 in 7 dots is a clay accent
+        clay: r3 > 0.86,         // ~1 in 7 dots is a clay accent
       });
     }
     return arr;
@@ -135,7 +130,7 @@ function SignalflowEye() {
 
   const reset = t > holdEnd ? (1 - (t - holdEnd) / (1 - holdEnd)) : 1;
   const outlineOpacity = Math.min(0.18, Math.max(0, (t - sweepStart) * 1.4)) * reset;
-  const irisOpacity = Math.max(0, (t - 0.55) * 3) * reset;
+  const irisOpacity    = Math.max(0, (t - 0.55) * 3) * reset;
 
   return (
     <svg
@@ -169,9 +164,9 @@ function SignalflowEye() {
       {t >= sweepStart && t <= sweepEnd && (
         <g transform="translate(0,50)">
           <rect x={sweepX - 30} y="60" width="60" height="280"
-                fill="url(#bd-signalflow-sweep)" opacity="0.7"/>
+            fill="url(#bd-signalflow-sweep)" opacity="0.7"/>
           <line x1={sweepX} y1="60" x2={sweepX} y2="340"
-                stroke="#B97A5C" strokeWidth="0.8" opacity="0.55"/>
+            stroke="#B97A5C" strokeWidth="0.8" opacity="0.55"/>
         </g>
       )}
 
@@ -186,7 +181,7 @@ function SignalflowEye() {
           const o = (0.35 + 0.65 * ordered) * reset;
           return (
             <circle key={i} cx={x} cy={y} r={d.size + ordered * 0.6}
-                    fill={color} opacity={o}/>
+              fill={color} opacity={o}/>
           );
         })}
       </g>

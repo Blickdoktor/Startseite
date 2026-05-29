@@ -5,7 +5,7 @@ function HowItWorks({ onBook }) {
     {
       n: '01', icon: 'pencil-line',
       title: 'Symptome schildern',
-      body: 'Beantworten Sie in 3 Minuten ein paar Fragen zu Ihren Beschwerden. Bei Bedarf laden Sie ein Foto hoch.'
+      body: 'Beschreiben Sie Ihre Beschwerden in wenigen Minuten und laden Sie ein Foto Ihres Auges hoch, damit die Ärztin Ihre Situation besser einschätzen kann.'
     },
     {
       n: '02', icon: 'calendar-check',
@@ -15,9 +15,10 @@ function HowItWorks({ onBook }) {
     {
       n: '03', icon: 'phone-call',
       title: 'Anruf der Ärztin',
-      body: 'Die Ärztin ruft Sie telefonisch zur gewählten Zeit an. Im Anschluss erhalten Sie Befund, ggf. Rezept oder Überweisung per E-Mail.'
+      body: 'Die Ärztin ruft Sie telefonisch zur gewählten Zeit an. Im Anschluss erhalten Sie eine Dokumentation und ggf. nach ärztlichem Ermessen ein Rezept.'
     },
   ];
+
   return (
     <section id="wie" className="section">
       <div className="container">
