@@ -25,16 +25,10 @@ Schildern Sie kurz Ihre Beschwerden - eine Fachärztin ruft Sie an. Ohne Wartezi
 <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
 <Button variant="ghost" size="lg" as="a" href="#wie" icon="play">So funktioniert es</Button>
 </div>
-<div className="row" style={{ gap: 24, marginTop: 16 }}>
-<div className="row-tight" style={{ gap: 8 }}>
-<Icon name="star" size={16} style={{ color: 'var(--bd-clay-600)' }} />
-<span className="meta" style={{ color: 'var(--fg-2)' }}><strong style={{ color: 'var(--fg-1)' }}>4,9</strong> · 2.140 Bewertungen</span>
-</div>
-<div className="row-tight" style={{ gap: 8 }}>
-<Icon name="clock" size={16} style={{ color: 'var(--bd-success)' }} />
-<span className="meta">Anruf in der Regel innerhalb von 30 Minuten</span>
-</div>
-</div>
+<div className="row-tight" style={{ gap: 8, marginTop: 16 }}>
+              <Icon name="clock" size={16} style={{ color: 'var(--bd-success)' }} />
+              <span className="meta">Anruf in der Regel innerhalb von 30 Minuten</span>
+            </div>
 </div>
 <HeroIllustration />
 </div>
