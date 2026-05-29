@@ -4,7 +4,7 @@
    =================================================================== */
 
 * { box-sizing: border-box; }
-html, body { margin: 0; }
+html, body { margin: 0; overflow-x: hidden; }
 body {
   background: var(--bd-bg);
   color: var(--fg-1);
@@ -250,5 +250,37 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   #top {
     padding-bottom: 32px !important;
+  }
+}
+
+/* ── Mobile: Trust strip → stacked ── */
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* ── Mobile: Hero font sizes + button wrap ── */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px !important;
+  }
+  .hero-buttons {
+    flex-wrap: wrap !important;
+  }
+  .hero-editorial-row {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  .hero-metric-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+  .hero-metric-strip > div {
+    border-left: none !important;
+  }
+  .hero-centered-image {
+    aspect-ratio: 16/10 !important;
   }
 }

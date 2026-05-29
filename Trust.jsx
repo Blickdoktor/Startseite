@@ -8,7 +8,7 @@ function TrustStrip() {
   ];
   return (
     <section className="section-bg-alt" style={{ padding: '32px 0', borderTop: '1px solid var(--bd-line-2)', borderBottom: '1px solid var(--bd-line-2)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+      <div className="container trust-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
         {items.map(it => (
           <div key={it.label} className="row-tight" style={{ gap: 12 }}>
             <Icon name={it.icon} size={20} style={{ color: 'var(--bd-blue-700)' }} />

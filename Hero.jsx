@@ -14,14 +14,14 @@ return (
 <div className="container hero-split-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' }}>
 <div className="stack-6">
 <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen</Badge>
-<h1 className="display-l" style={{ margin: 0, fontSize: 64 }}>
+<h1 className="display-l hero-title" style={{ margin: 0, fontSize: 64 }}>
 Augenarzt-Sprechstunde<br/>
 <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>in wenigen Minuten.</span>
 </h1>
 <p className="lead" style={{ maxWidth: 480 }}>
 Schildern Sie kurz Ihre Beschwerden - eine Fachärztin ruft Sie an. Ohne Wartezimmer, ohne Anfahrt.
 </p>
-<div className="row-tight" style={{ gap: 12, marginTop: 8 }}>
+<div className="row-tight hero-buttons" style={{ gap: 12, marginTop: 8 }}>
 <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
 <Button variant="ghost" size="lg" as="a" href="#wie" icon="play">So funktioniert es</Button>
 </div>
@@ -203,18 +203,18 @@ return (
 <section id="top" style={{ paddingTop: 56, paddingBottom: 32, textAlign: 'center' }}>
 <div className="container-narrow stack-6" style={{ alignItems: 'center' }}>
 <Badge tone="sage" icon="shield-check">Approbierte Augenärzt:innen · DSGVO-konform</Badge>
-<h1 className="display-l" style={{ margin: 0, fontSize: 72, lineHeight: 1.02, textAlign: 'center' }}>
+<h1 className="display-l hero-title" style={{ margin: 0, fontSize: 72, lineHeight: 1.02, textAlign: 'center' }}>
 Wieder klar sehen.<br/>
 <span className="serif-italic" style={{ color: 'var(--bd-blue-700)' }}>Ohne Wartezimmer.</span>
 </h1>
 <p className="lead" style={{ maxWidth: 540, textAlign: 'center' }}>
 Fachärztliche Beratung bei Augenproblemen — telefonisch, in wenigen Minuten, bequem von zu Hause aus.
 </p>
-<div className="row-tight" style={{ gap: 12 }}>
+<div className="row-tight hero-buttons" style={{ gap: 12 }}>
 <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
 <Button variant="secondary" size="lg" as="a" href="#sprechstunde">Symptome prüfen</Button>
 </div>
-<div style={{ marginTop: 40, width: '100%', maxWidth: 820, position: 'relative', aspectRatio: '16/8', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-blue-50)' }}>
+<div className="hero-centered-image" style={{ marginTop: 40, width: '100%', maxWidth: 820, position: 'relative', aspectRatio: '16/8', borderRadius: 'var(--r-2xl)', overflow: 'hidden', background: 'var(--bd-blue-50)' }}>
 <svg viewBox="0 0 800 400" style={{ width: '100%', height: '100%' }} xmlns="http://www.w3.org/2000/svg">
 <rect width="800" height="400" fill="#ECF2F6"/>
 <path d="M220 200 C 280 110, 520 110, 580 200 C 520 290, 280 290, 220 200 Z" fill="none" stroke="#2A5470" strokeWidth="3"/>
@@ -233,10 +233,10 @@ function HeroEditorial({ onBook }) {
 return (
 <section id="top" style={{ paddingTop: 48, paddingBottom: 80 }}>
 <div className="container">
-<div className="row" style={{ alignItems: 'flex-start', gap: 48 }}>
+<div className="row hero-editorial-row" style={{ alignItems: 'flex-start', gap: 48 }}>
 <div style={{ flex: '1 1 56%' }} className="stack-6">
 <div className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Digitale Augenheilkunde · seit 2021</div>
-<h1 style={{
+<h1 className="hero-title" style={{
 margin: 0, fontSize: 88, lineHeight: 0.95, letterSpacing: '-0.03em',
 fontFamily: 'var(--font-serif)', fontWeight: 350
 }}>
@@ -245,7 +245,7 @@ Schnell.<br/>Fachlich.<br/><span style={{ color: 'var(--bd-clay-600)' }}>Menschl
 <p style={{ fontSize: 18, color: 'var(--fg-2)', maxWidth: 460, margin: 0, lineHeight: 1.55 }}>
 Wir sind ein Team aus Augenärzt:innen, das Sie online behandelt — mit der gleichen Sorgfalt wie in der Praxis.
 </p>
-<div className="row-tight" style={{ gap: 12 }}>
+<div className="row-tight hero-buttons" style={{ gap: 12 }}>
 <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
 <Button variant="ghost" size="lg" as="a" href="#wie">Unser Vorgehen</Button>
 </div>
@@ -262,7 +262,7 @@ Wir sind ein Team aus Augenärzt:innen, das Sie online behandelt — mit der gle
 </div>
 </div>
 {/* Metric strip */}
-<div style={{
+<div className="hero-metric-strip" style={{
 marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0,
 borderTop: '1px solid var(--bd-line)', borderBottom: '1px solid var(--bd-line)', paddingBlock: 32
 }}>

@@ -32,7 +32,7 @@ function HowItWorks({ onBook }) {
           <h2>Vier Schritte zum Termin.</h2>
           <p>Ohne Anmeldung, ohne App-Download. Sie brauchen nur ein Smartphone oder einen Laptop mit Kamera.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        <div className="how-it-works-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {steps.map((s, i) => (
             <div key={s.n} className="card" style={{ background: 'var(--bd-bg-2)', borderColor: 'transparent', boxShadow: 'none', padding: 32 }}>
               <div className="spread" style={{ marginBottom: 24, alignItems: 'flex-start' }}>
