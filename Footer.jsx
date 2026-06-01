@@ -42,8 +42,8 @@ Blickdoktor – Online Augenarztpraxis Dr. Oehmichen für Privatpatienten und Se
 </div>
 <FooterCol title="Sprechstunde" links={[
 { label: 'Trockene Augen', href: ETERMIN_URL },
-{ label: 'Sehverschlechterung',href: ETERMIN_URL },
-{ label: 'Rezeptverlängerung', href: ETERMIN_URL },
+{ label: 'Gerstenkorn oder Hagelkorn',href: ETERMIN_URL },
+{ label: 'Aufklärung über Erkrankung', href: ETERMIN_URL },
 { label: 'Zweitmeinung', href: ETERMIN_URL },
 { label: 'Alle Leistungen', href: ETERMIN_URL },
 ]} />
@@ -60,7 +60,7 @@ paddingTop: 24, borderTop: '1px solid rgba(246,242,235,0.12)',
 flexWrap: 'wrap', gap: 16
 }}>
 <div className="row-tight" style={{ gap: 16, color: 'rgba(246,242,235,0.55)', fontSize: 13, flexWrap: 'wrap' }}>
-<span>© 2026 Blickdoktor GmbH</span>
+<span>Blickdoktor – Online Augenarztpraxis Dr. Oehmichen</span>
 <span>·</span>
 <span>Server in Deutschland</span>
 <span>·</span>
