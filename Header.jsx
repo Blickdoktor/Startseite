@@ -25,11 +25,11 @@ function Header({ onBook }) {
     return function() { window.removeEventListener('resize', onResize); };
   }, []);
 
-  var links = [
-    { href: '#sprechstunde', label: 'Sprechstunde' },
-    { href: '#wie', label: 'Wie es funktioniert' },
-    { href: '#team', label: 'Team' },
-    { href: '#preise', label: 'Preise' },
+var links = [
+    { href: '/Startseite/#sprechstunde', label: 'Sprechstunde' },
+    { href: '/Startseite/#wie', label: 'Wie es funktioniert' },
+    { href: '/Startseite/#team', label: 'Team' },
+    { href: '/Startseite/#preise', label: 'Preise' },
   ];
 
   var bg = (scrolled || menuOpen) ? 'rgba(246,242,235,0.97)' : 'transparent';
@@ -50,7 +50,7 @@ function Header({ onBook }) {
         justifyContent: 'space-between', padding: '16px 24px'
       }}>
 
-        <a href="#top" style={{ display: 'flex', textDecoration: 'none' }}>
+       <a href="/Startseite/" style={{ display: 'flex', textDecoration: 'none' }}>
           <Logo height={28} />
         </a>
 
