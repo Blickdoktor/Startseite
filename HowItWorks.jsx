@@ -20,7 +20,7 @@ function HowItWorks({ onBook }) {
     {
       n: '04', icon: 'file-text',
       title: 'Dokumentation und Abrechnung',
-      body: 'Im Anschluss erhalten Sie eine Dokumentation und ggf. nach ärztlichem Ermessen ein Rezept. Ebenfalls erhalten Sie die Rechnung nach Gebührenordnung für Ärzte.'
+      body: 'Im Anschluss erhalten Sie eine ärztliche Bescheinigung und ggf. nach ärztlichem Ermessen ein Rezept. Ebenfalls erhalten Sie die Rechnung nach Gebührenordnung für Ärzte.'
     },
   ];
 
