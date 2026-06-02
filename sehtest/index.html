@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Online-Sehtest — Blickdoktor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kostenloser Online-Sehtest von Blickdoktor. Prüfen Sie Ihre Sehschärfe bequem von zuhause — in Vorbereitung auf Ihre Online-Augenarzt-Sprechstunde.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blickdoktor.github.io/Startseite/sehtest/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Blickdoktor">
+  <meta property="og:title" content="Online-Sehtest — Blickdoktor">
+  <meta property="og:description" content="Prüfen Sie Ihre Sehschärfe bequem von zuhause — in Vorbereitung auf Ihre Online-Augenarzt-Sprechstunde.">
+  <meta property="og:url" content="https://blickdoktor.github.io/Startseite/sehtest/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../logo-mark.svg" type="image/svg+xml">
+
+  <!-- Parent-Stylesheets für konsistente Farben & Typografie -->
+  <link rel="stylesheet" href="../colors_and_type.css">
+
+  <style>
+    /* ── Reset & Basis ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--bd-font-body, 'Georgia', serif);
+      color: var(--bd-blue-900, #1a2a3a);
+      background: var(--bd-cream-50, #FDFAF5);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--bd-blue-700, #2d5a7b); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ──────────────────────────────────────── */
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 24px;
+    }
+
+    .site-header a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--bd-blue-900, #1a2a3a);
+    }
+
+    .site-header img {
+      height: 28px;
+      width: auto;
+    }
+
+    .header-back {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--bd-blue-700, #2d5a7b);
+    }
+
+    /* ── Hauptbereich ────────────────────────────────── */
+    .page-content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    h1 {
+      font-family: var(--bd-font-display, 'Georgia', serif);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--bd-blue-900, #1a2a3a);
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--bd-blue-700, #2d5a7b);
+      margin-bottom: 32px;
+    }
+
+    /* ── Anleitung ───────────────────────────────────── */
+    .instructions {
+      background: var(--bd-cream-100, #F6F2EB);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      border-left: 4px solid var(--bd-sage-500, #7A9A8A);
+    }
+
+    .instructions h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--bd-blue-900, #1a2a3a);
+    }
+
+    .instructions ol {
+      padding-left: 20px;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .instructions li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Sehtest-Container ───────────────────────────── */
+    .sehtest-wrapper {
+      margin-bottom: 32px;
+    }
+
+    .sehtest-wrapper h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .sehtest-scroll-container {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--bd-cream-200, #E8E0D4);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 16px;
+    }
+
+    .sehtest-scroll-container img {
+      /* ── KERNSTÜCK: Bild wird NICHT runterskaliert ── */
+      max-width: none;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .scroll-hint {
+      display: none;
+      font-size: 13px;
+      color: var(--bd-blue-500, #5a7a9a);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Hinweis nur auf Mobilgeräten anzeigen */
+    @media (max-width: 768px) {
+      .scroll-hint { display: block; }
+    }
+
+    /* ── Eingabefelder ───────────────────────────────── */
+    .input-section {
+      margin-bottom: 40px;
+    }
+
+    .input-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .eye-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .eye-input-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .eye-input-row label {
+      font-size: 15px;
+      font-weight: 600;
+      min-width: 140px;
+      color: var(--bd-blue-900, #1a2a3a);
+    }
+
+    .eye-input-row input {
+      flex: 1;
+      max-width: 320px;
+      padding: 10px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      border: 1px solid var(--bd-cream-200, #E8E0D4);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--bd-blue-900, #1a2a3a);
+      transition: border-color 0.2s;
+    }
+
+    .eye-input-row input:focus {
+      outline: none;
+      border-color: var(--bd-sage-500, #7A9A8A);
+      box-shadow: 0 0 0 3px rgba(122, 154, 138, 0.15);
+    }
+
+    .eye-input-row input::placeholder {
+      color: var(--bd-blue-300, #a0b4c8);
+    }
+
+    /* ── Hinweis-Box ─────────────────────────────────── */
+    .notice {
+      background: var(--bd-cream-100, #F6F2EB);
+      border-radius: 12px;
+      padding: 20px 24px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--bd-blue-700, #2d5a7b);
+      margin-bottom: 40px;
+    }
+
+    .notice strong {
+      color: var(--bd-blue-900, #1a2a3a);
+    }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .site-footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+      border-top: 1px solid var(--bd-cream-200, #E8E0D4);
+      font-size: 13px;
+      color: var(--bd-blue-500, #5a7a9a);
+    }
+
+    .site-footer nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .site-footer a {
+      color: var(--bd-blue-700, #2d5a7b);
+      font-size: 13px;
+    }
+
+    /* ── Print ────────────────────────────────────────── */
+    @media print {
+      .site-header, .site-footer, .scroll-hint, .input-section, .notice { display: none; }
+      .sehtest-scroll-container { border: none; padding: 0; overflow: visible; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="../">
+      <img src="../logo-mark.svg" alt="Blickdoktor" width="28" height="28">
+      Blickdoktor
+    </a>
+    <a href="../" class="header-back">← Zurück zur Startseite</a>
+  </header>
+
+  <!-- Inhalt -->
+  <main class="page-content">
+
+    <h1>Online-Sehtest</h1>
+    <p class="subtitle">Prüfen Sie Ihre Sehschärfe in Vorbereitung auf Ihre Sprechstunde.</p>
+
+    <!-- Anleitung -->
+    <div class="instructions">
+      <h2>So funktioniert der Test</h2>
+      <ol>
+        <li>Setzen Sie sich circa <strong>50 cm</strong> vom Bildschirm entfernt hin.</li>
+        <li>Falls Sie eine Brille oder Kontaktlinsen tragen, setzen Sie diese bitte auf bzw. ein.</li>
+        <li>Halten Sie sich zuerst Ihr <strong>linkes Auge</strong> zu und lesen Sie die kleinste Zeile, die Sie noch erkennen können.</li>
+        <li>Tippen Sie die Buchstaben in das Feld unten ein (z.&thinsp;B. <em>FELOPZD</em>).</li>
+        <li>Halten Sie anschließend Ihr <strong>rechtes Auge</strong> zu und wiederholen Sie den Vorgang.</li>
+      </ol>
+    </div>
+
+    <!-- Sehtest-Bild -->
+    <div class="sehtest-wrapper">
+      <h2>Sehtafel</h2>
+      <div class="sehtest-scroll-container">
+        <!--
+          BILD AUSTAUSCHEN:
+          Ersetze den src-Pfad durch das eigene Bild, z.B. "sehtest.jpg",
+          wenn das Bild im selben Ordner (sehtest/) liegt.
+        -->
+        <img
+          src="https://static.wixstatic.com/media/d7aaf0_5a9594afc8794e59ab8e2260a5b7d2cc~mv2.jpeg"
+          alt="Snellen-Sehtafel mit abnehmender Buchstabengröße"
+          id="sehtest-bild"
+        >
+      </div>
+      <p class="scroll-hint">↔ Wischen Sie nach rechts, um die gesamte Tafel zu sehen.</p>
+    </div>
+
+    <!-- Eingabefelder -->
+    <div class="input-section">
+      <h2>Ihre Ergebnisse</h2>
+      <div class="eye-input-group">
+        <div class="eye-input-row">
+          <label for="rechtes-auge">Rechtes Auge:</label>
+          <input type="text" id="rechtes-auge" placeholder="z. B. FELOPZD" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="eye-input-row">
+          <label for="linkes-auge">Linkes Auge:</label>
+          <input type="text" id="linkes-auge" placeholder="z. B. FELOPZD" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </div>
+
+    <!-- Hinweis -->
+    <div class="notice">
+      <strong>Hinweis:</strong> Dieser Online-Sehtest ersetzt keine augenärztliche Untersuchung.
+      Er dient als Vorbereitung für Ihre Sprechstunde, damit unsere Ärzt:innen Ihre Sehschärfe
+      besser einschätzen können. Die Darstellungsgröße kann je nach Bildschirm variieren.
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 Blickdoktor GmbH · Server in Deutschland · DSGVO-konform</p>
+    <nav>
+      <a href="mailto:hallo@blickdoktor.de">Kontakt</a>
+      <a href="../datenschutzerklaerung/">Datenschutzerklärung</a>
+      <a href="../impressum/">Impressum</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
