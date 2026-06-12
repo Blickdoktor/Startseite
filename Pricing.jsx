@@ -3,12 +3,12 @@
 function Pricing({ onBook }) {
 
 const items = [
-{ label: 'Aufklärung über Erkrankung', hint: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '25,47 €' },
-{ label: 'Trockene Augen', hint: 'Beratung & Therapieempfehlung', price: '25,47 €' },
-{ label: 'Bindehautentzündung', hint: 'Rote, juckende Augen', price: '25,47 €' },
-{ label: 'Gerstenkorn oder Hagelkorn', hint: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '25,47 €' },
-{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin', price: '25,47 €' },
-{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '25,47 €' },
+{ label: 'Aufklärung über Erkrankung', hint: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '38,87 €' },
+{ label: 'Trockene Augen', hint: 'Beratung & Therapieempfehlung', price: '38,87 €' },
+{ label: 'Bindehautentzündung', hint: 'Rote, juckende Augen', price: '38,87 €' },
+{ label: 'Gerstenkorn oder Hagelkorn', hint: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '38,87 €' },
+{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin', price: '38,87 €' },
+{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '38,87 €' },
 ];
 
 return (
@@ -16,7 +16,7 @@ return (
 <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
 <div className="section-head" style={{ position: 'sticky', top: 96 }}>
 <span className="eyebrow">Preise</span>
-<h2>Transparent, 25,47 €.</h2>
+<h2>Transparent, 38,87 €.</h2>
 <p style={{ marginBottom: 24 }}>
 Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstzahler. Keine Abrechnung über die Krankenkasse. Sie zahlen erst nach der Sprechstunde.
 </p>
@@ -26,7 +26,7 @@ Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstz
 </div>
 <div className="row-tight" style={{ gap: 12, marginBottom: 12 }}>
 <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
-<span style={{ fontSize: 14.5, color: 'var(--fg-2)' }}>Ärztliche Bescheinigung noch am selben Tag</span>
+<span style={{ fontSize: 14.5, color: 'var(--fg-2)' }}>Ärztlicher Bericht noch am selben Tag</span>
 </div>
 <div className="row-tight" style={{ gap: 12, marginBottom: 24 }}>
 <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
