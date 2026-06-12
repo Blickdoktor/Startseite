@@ -3,11 +3,11 @@
 function Conditions({ onBook }) {
   const isMobile = useIsMobile();
   const items = [
-    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: '25,47 €' },
-    { icon: 'glasses', title: 'Gerstenkorn oder Hagelkorn', body: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '25,47 €' },
-    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '25,47 €' },
-    { icon: 'eye',         title: 'Bindehautentzündung',    body: 'Rote, juckende Augen — schnelle Einschätzung und Therapie.',    price: '25,47 €' },
-    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.',       price: '25,47 €' },
+    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: '38,87 €' },
+    { icon: 'glasses', title: 'Gerstenkorn oder Hagelkorn', body: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '38,87 €' },
+    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '38,87 €' },
+    { icon: 'eye',         title: 'Bindehautentzündung',    body: 'Rote, juckende Augen — schnelle Einschätzung und Therapie.',    price: '38,87 €' },
+    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.',       price: '38,87 €' },
   ];
   return (
     <section id="sprechstunde" className="section">
