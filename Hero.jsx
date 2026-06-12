@@ -270,7 +270,7 @@ borderTop: '1px solid var(--bd-line)', borderBottom: '1px solid var(--bd-line)',
 ['Minuten', 'Antwortzeit — nicht Stunden'],
 ['12.400+', 'behandelte Patient:innen'],
 ['4,9/5', '2.140 Bewertungen'],
-['25,47 €', 'transparente Festpreise'],
+['38,87 €', 'transparente Festpreise'],
 ].map(([n, l], i) => (
 <div key={i} style={{
 padding: '0 24px',
