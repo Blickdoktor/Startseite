@@ -20,7 +20,7 @@ const TESTIMONIALS = [
     meta: "Patientin"
   },
   {
-    text: "Innerhalb von 10 Minuten hat mich eine sehr nette und kompetente Ärztin kontaktiert! Dank Blickdoktor habe ich meine Augenproblematik ernst genommen und bin sofort in eine Notfallambulanz gefahren. Dort wurde die Diagnose Netzhautablösung bestätigt und ich konnte rechtzeitig operiert werden. Ohne Blickdoktor wäre ich nicht in die Klinik gefahren, sondern hätte erst noch abgewartet! Sind die 25€ total wert! Vielen Dank, kann ich nur jedem weiterempfehlen!",
+    text: "Innerhalb von 10 Minuten hat mich eine sehr nette und kompetente Ärztin kontaktiert! Dank Blickdoktor habe ich meine Augenproblematik ernst genommen und bin sofort in eine Notfallambulanz gefahren. Dort wurde die Diagnose Netzhautablösung bestätigt und ich konnte rechtzeitig operiert werden. Ohne Blickdoktor wäre ich nicht in die Klinik gefahren, sondern hätte erst noch abgewartet! Vielen Dank, kann ich nur jedem weiterempfehlen!",
     author: "Anonym",
     initials: "AN",
     meta: "Patient"
