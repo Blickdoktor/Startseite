@@ -18,7 +18,7 @@ return (
 <span className="eyebrow">Preise</span>
 <h2>Transparent, 37,54 €.</h2>
 <p style={{ marginBottom: 24 }}>
-Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstzahler. Keine Abrechnung über die Krankenkasse. Sie zahlen erst nach der Sprechstunde.
+Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstzahler. Keine Abrechnung über die gesetzliche Krankenkasse. Sie zahlen erst nach der Sprechstunde.
 </p>
 <div className="row-tight" style={{ gap: 12, marginBottom: 12 }}>
 <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
