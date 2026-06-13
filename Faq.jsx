@@ -8,7 +8,7 @@ a: 'In der Regel werden Sie innerhalb weniger Minuten zurückgerufen. Für spät
 },
 {
 q: 'Was kostet eine Sprechstunde?',
-a: 'Jede Sprechstunde kostet 25,47 €. Den Preis sehen Sie vor der Buchung. Die Sprechstunde ist eine Selbstzahler-Leistung.'
+a: 'Jede Sprechstunde kostet 37,54 €. Den Preis sehen Sie vor der Buchung. Die Sprechstunde ist eine Selbstzahler-Leistung.'
 },
 {
 q: 'Kann ich ein Rezept oder eine Krankschreibung bekommen?',
