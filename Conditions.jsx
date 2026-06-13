@@ -3,11 +3,11 @@
 function Conditions({ onBook }) {
   const isMobile = useIsMobile();
   const items = [
-    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: '38,87 €' },
-    { icon: 'glasses', title: 'Gerstenkorn oder Hagelkorn', body: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '38,87 €' },
-    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '38,87 €' },
-    { icon: 'eye',         title: 'Bindehautentzündung',    body: 'Rote, juckende Augen — schnelle Einschätzung und Therapie.',    price: '38,87 €' },
-    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.',       price: '38,87 €' },
+    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: '37,54 €' },
+    { icon: 'glasses', title: 'Lidproblem/Schwellung', body: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn', price: '37,54 €' },
+    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.', price: '37,54 €' },
+    { icon: 'eye',         title: 'Rötung/Reizung',    body: 'Rote, juckende Augen, Entzündung, Allergien — schnelle Einschätzung und Therapie.',    price: '37,54 €' },
+    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.',       price: '37,54 €' },
   ];
   return (
     <section id="sprechstunde" className="section">
@@ -59,7 +59,7 @@ function Conditions({ onBook }) {
               Akute Beschwerden oder Notfall?
             </strong>
             <p style={{ margin: 0, fontSize: 14, color: 'var(--bd-warning)', lineHeight: 1.55, maxWidth: 720 }}>
-              Bei Sehverschlechterung, Doppelbildern, oder Schmerzen melden Sie sich bitte
+              Bei akuter Sehverschlechterung, Doppelbildern, oder starken Schmerzen melden Sie sich bitte
               sofort bei der <strong>116117</strong> oder <strong>112</strong> sowie bei ortsnahen Augenärzt:innen.
             </p>
           </div>
