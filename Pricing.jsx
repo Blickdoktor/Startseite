@@ -3,12 +3,12 @@
 function Pricing({ onBook }) {
 
 const items = [
-{ label: 'Aufklärung über Erkrankung', hint: 'U.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star', price: '38,87 €' },
-{ label: 'Trockene Augen', hint: 'Beratung & Therapieempfehlung', price: '38,87 €' },
-{ label: 'Bindehautentzündung', hint: 'Rote, juckende Augen', price: '38,87 €' },
-{ label: 'Gerstenkorn oder Hagelkorn', hint: 'Augenschwellung, Druckschmerz, Lidrandentzündung', price: '38,87 €' },
-{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin', price: '38,87 €' },
-{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '38,87 €' },
+{ label: 'Aufklärung über Erkrankung', hint: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.', price: '37,54 €' },
+{ label: 'Trockene Augen oder Fremdkörpergefühl', hint: 'Beratung & Therapieempfehlung', price: '37,54 €' },
+{ label: 'Rötung/Reizung', hint: 'juckende Augen, Schmerzen, Allergien', price: '37,54 €' },
+{ label: 'Lidproblem/Schwellung', hint: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn', price: '37,54 €' },
+{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin', price: '37,54 €' },
+{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '37,54 €' },
 ];
 
 return (
@@ -16,7 +16,7 @@ return (
 <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
 <div className="section-head" style={{ position: 'sticky', top: 96 }}>
 <span className="eyebrow">Preise</span>
-<h2>Transparent, 38,87 €.</h2>
+<h2>Transparent, 37,54 €.</h2>
 <p style={{ marginBottom: 24 }}>
 Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstzahler. Keine Abrechnung über die Krankenkasse. Sie zahlen erst nach der Sprechstunde.
 </p>
@@ -69,7 +69,7 @@ borderTop: '1px solid var(--bd-line)',
 background: 'var(--bd-bg-2)',
 fontSize: 13.5, color: 'var(--fg-3)'
 }}>
-Rezept und Krankschreibung sind im Preis enthalten, sofern medizinisch angezeigt.
+Rezept und Krankschreibung sind im Preis enthalten, sofern medizinisch angezeigt (ausschließlich über Postweg möglich).
 </div>
 </div>
 </div>
