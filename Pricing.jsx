@@ -22,7 +22,7 @@ Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstz
 </p>
 <div className="row-tight" style={{ gap: 12, marginBottom: 12 }}>
 <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
-<span style={{ fontSize: 14.5, color: 'var(--fg-2)' }}>Kostenvoranschlag vor der Buchung</span>
+<span style={{ fontSize: 14.5, color: 'var(--fg-2)' }}>schriftliche Rechnung nach GOÄ geziffert</span>
 </div>
 <div className="row-tight" style={{ gap: 12, marginBottom: 12 }}>
 <Icon name="check" size={16} style={{ color: 'var(--bd-sage-700)' }} />
