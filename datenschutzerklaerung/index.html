@@ -78,7 +78,26 @@
       margin-bottom: 48px;
     }
     .back-link:hover { text-decoration: underline; }
-    /* Focus */
+    .dse-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 16px;
+      font-size: 15px;
+    }
+    .dse-wrap table th,
+    .dse-wrap table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--bd-neutral-200, #e8e4de);
+      color: var(--bd-blue-800, #1e3a5f);
+    }
+    .dse-wrap table th {
+      font-weight: 600;
+      color: var(--bd-blue-900);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
     a:focus-visible, button:focus-visible {
       outline: 2px solid var(--bd-blue-700) !important;
       outline-offset: 2px !important;
@@ -94,7 +113,6 @@
 <body>
 
 <div id="root">
-  <!-- Pre-Rendered Content -->
   <header>
     <nav aria-label="Hauptnavigation">
       <a href="/Startseite/">Blickdoktor</a>
@@ -104,7 +122,7 @@
     <h1>Datenschutzerklärung</h1>
   </main>
   <footer>
-    <p>© 2026 Blickdoktor GmbH</p>
+    <p>&copy; 2026 Blickdoktor</p>
   </footer>
 </div>
 
@@ -122,305 +140,221 @@ function DatenschutzPage() {
       <Header />
       <main id="main-content">
         <div className="dse-wrap">
-          <a href="/Startseite/" className="back-link">← Zurück zur Startseite</a>
+          <a href="/Startseite/" className="back-link">&larr; Zur&uuml;ck zur Startseite</a>
 
-          <h1>Datenschutzerklärung</h1>
+          <h1>Datenschutzerkl&auml;rung</h1>
 
-          <div className="dse-intro">
-            <p>
-              Liebe Besucherin, lieber Besucher dieser Website,
-            </p>
-            <p>
-              der Schutz Ihrer personenbezogenen Daten ist nicht nur Ihnen, sondern auch uns, den gemeinsam Verantwortlichen des Online-Portals „Blickdoktor" (im Folgenden „wir", „uns"), ein großes Anliegen. Wir wissen Ihr Vertrauen darin, dass wir mit Ihren personenbezogenen Daten gewissenhaft und gesetzeskonform umgehen, zu schätzen. Ihre Daten werden bei uns vertraulich behandelt.
-            </p>
-            <p>
-              Mit diesen Datenschutzhinweisen möchten wir nicht nur unserer gesetzlichen Pflicht aus Art. 13 und 14 DS‑GVO nachkommen, sondern Ihnen verständlich beschreiben, welche personenbezogenen Daten beim Besuch unserer Website erhoben werden und wie wir mit ihnen umgehen.
-            </p>
-          </div>
+          <p><strong>Stand: Juni 2026</strong></p>
 
-          {/* ── Cookie-Banner ── */}
-          <h2>Informationen zur Notwendigkeit des „Local Storage"</h2>
-
-          <h3>Zwecke</h3>
+          {/* ── 1. Verantwortlicher ── */}
+          <h2>1. Verantwortlicher</h2>
           <p>
-            Wenn Sie unsere Website öffnen, wird der Cookie-Banner angezeigt. Für die Verwaltung dieses Cookie-Banners, also die Verwaltung Ihrer Einwilligungen, ist es technisch notwendig, ein Cookie auf Ihrem Endgerät zu setzen.
+            Dr. med. Evrim Oehmichen, FEBO<br />
+            Fach&auml;rztin f&uuml;r Augenheilkunde<br />
+            Ligusterweg 1<br />
+            53127 Bonn
+          </p>
+          <p>
+            E-Mail: <a href="mailto:kontakt@blickdoktor.de">kontakt@blickdoktor.de</a>
           </p>
 
-          <h3>Datenarten</h3>
+          {/* ── 2. Ärztliche Schweigepflicht ── */}
+          <h2>2. &Auml;rztliche Schweigepflicht</h2>
           <p>
-            Es wird ein einziges Cookie auf Ihrem Endgerät gespeichert, das Informationen dazu beinhaltet, ob und in welche nicht technisch notwendigen Cookies Sie eingewilligt haben.
+            Neben den datenschutzrechtlichen Vorgaben unterliegen wir als Arztpraxis der &auml;rztlichen Schweigepflicht nach &sect; 203 StGB und &sect; 9 der Berufsordnung der &Auml;rztekammer Nordrhein. Das bedeutet: Alle Informationen, die uns im Rahmen der Behandlung bekannt werden, sind vertraulich und werden nur mit Ihrer ausdr&uuml;cklichen Einwilligung oder aufgrund gesetzlicher Verpflichtung weitergegeben.
           </p>
 
-          <h3>Rechtsgrundlage</h3>
+          {/* ── 3. Aufsichtsbehörde ── */}
+          <h2>3. Zust&auml;ndige Datenschutz-Aufsichtsbeh&ouml;rde</h2>
           <p>
-            Die Rechtsgrundlage für das Setzen des technisch notwendigen Cookies ist unsere gesetzliche Verpflichtung, Ihre Einwilligungen zu verwalten und nachweisen zu können gem. Art. 6 Abs. 1 UAbs. 1 lit. c i. V. m. Art. 5 Abs. 2 und Art. 7 Abs. 1 DS‑GVO.
+            Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen<br />
+            Kavalleriestraße 2&ndash;4<br />
+            40213 D&uuml;sseldorf<br />
+            <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a>
           </p>
 
-          <h3>Speicherdauer</h3>
+          {/* ── 4. Hosting ── */}
+          <h2>4. Hosting und Server-Logfiles</h2>
           <p>
-            Die Speicherdauer beträgt 12 Monate. Der „Local Storage" kann jederzeit über die Browser-Einstellung gelöscht werden.
+            <strong>Anbieter:</strong> STRATO AG, Otto-Ostrowski-Stra&szlig;e 7, 10249 Berlin<br />
+            <strong>Serverstandort:</strong> Deutschland (Berlin und Karlsruhe)
           </p>
-
-          <h3>Empfänger</h3>
           <p>
-            Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland für die Bereitstellung unserer Website.
-          </p>
-
-          {/* ── Server-Wartung ── */}
-          <h2>Verarbeitungen in Zusammenhang mit unserer Server-Wartung</h2>
-
-          <h3>Zwecke</h3>
-          <p>
-            Wenn Sie unsere Website aufrufen, werden die unten genannten auf Sie beziehbaren Daten, die der auf Ihrem Endgerät (Mobiltelefon, Laptop, PC o. ä.) zum Einsatz kommende Browser an den Server unserer Website sendet, zu folgenden Zwecken verarbeitet:
+            Beim Aufruf unserer Website erhebt unser Hoster automatisch folgende Daten in Server-Logfiles:
           </p>
           <ul>
-            <li>die Gewährleistung eines reibungslosen Verbindungsaufbaus der Website,</li>
-            <li>die Gewährleistung einer komfortablen Nutzung unserer Website,</li>
-            <li>die Auswertung der Systemsicherheit und Systemstabilität sowie</li>
-            <li>zu weiteren administrativen Zwecken.</li>
+            <li>IP-Adresse (anonymisiert nach 7 Tagen)</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>aufgerufene Seite / Datei</li>
+            <li>&uuml;bertragene Datenmenge</li>
+            <li>Referrer-URL</li>
+            <li>verwendeter Browser und Betriebssystem</li>
           </ul>
+          <p>
+            Diese Daten werden ausschlie&szlig;lich zur Sicherstellung eines st&ouml;rungsfreien Betriebs und zur Erkennung von Angriffen verarbeitet.
+          </p>
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Sicherheit und Stabilit&auml;t der Website).<br />
+            <strong>Speicherdauer:</strong> Die Logfiles werden nach 7 Tagen automatisch gel&ouml;scht.<br />
+            <strong>Auftragsverarbeitung:</strong> Mit STRATO wurde ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO geschlossen.
+          </p>
 
-          <h3>Datenarten</h3>
-          <p>Nachfolgende Daten werden verarbeitet:</p>
+          {/* ── 5. Cookies ── */}
+          <h2>5. Cookies und Tracking</h2>
+          <p>
+            Unsere Website setzt keine Cookies und verwendet keine Tracking- oder Analyse-Tools. Es findet keine Verhaltensanalyse oder Profilbildung statt. Ein Cookie-Banner ist daher nicht erforderlich.
+          </p>
+
+          {/* ── 6. SSL ── */}
+          <h2>6. SSL/TLS-Verschl&uuml;sselung</h2>
+          <p>
+            Unsere Website nutzt eine SSL/TLS-Verschl&uuml;sselung. Daten, die Sie an uns &uuml;bermitteln, k&ouml;nnen nicht von Dritten mitgelesen werden. Sie erkennen eine verschl&uuml;sselte Verbindung am Schloss-Symbol in der Adresszeile Ihres Browsers und an der Adresse &bdquo;https://&ldquo;.
+          </p>
+
+          {/* ── 7. eTermin ── */}
+          <h2>7. Online-Terminbuchung &uuml;ber eTermin</h2>
+          <p>
+            F&uuml;r die Online-Terminbuchung nutzen wir den Dienst eTermin.
+          </p>
+          <p>
+            <strong>Anbieter:</strong> eTermin GmbH, Schweiz<br />
+            <strong>Serverstandort:</strong> Frankfurt am Main, Deutschland
+          </p>
+          <p>
+            Im Rahmen der Terminbuchung und Behandlungsvorbereitung werden folgende Daten verarbeitet:
+          </p>
           <ul>
-            <li>die IP-Adresse Ihres Endgeräts,</li>
-            <li>das Datum und die Uhrzeit Ihres Zugriffs,</li>
-            <li>der Inhalt Ihrer Anforderung (konkrete Webseiten, die von Ihnen angesteuert werden),</li>
-            <li>der Name und die URL der von Ihnen abgerufenen Dateien,</li>
-            <li>die Website, von der aus Ihr Zugriff erfolgt (Referrer-URL),</li>
-            <li>der von Ihnen verwendete Browser,</li>
-            <li>das Betriebssystem Ihres Endgerätes,</li>
-            <li>der Name Ihres Access-Providers,</li>
-            <li>die Spracheinstellungen der von Ihrem Endgerät verwendeten Browsersoftware,</li>
-            <li>die Version der von Ihrem Endgerät verwendeten Browsersoftware,</li>
-            <li>die Zeitzonendifferenz zur Greenwich Mean Time (GMT) Ihres Endgeräts,</li>
-            <li>der Zugriffsstatus/HTTP-Statuscode.</li>
+            <li>Anrede, Vorname, Nachname</li>
+            <li>Geburtsdatum</li>
+            <li>Anschrift (Stra&szlig;e, PLZ, Ort)</li>
+            <li>Telefonnummer</li>
+            <li>E-Mail-Adresse (optional)</li>
+            <li>Art der Beschwerden (z.B. &bdquo;R&ouml;tung / Reizung&ldquo;, &bdquo;Sehverschlechterung&ldquo;)</li>
+            <li>Dauer der Beschwerden</li>
+            <li>betroffenes Auge</li>
+            <li>Freitextbeschreibung des Anliegens (optional)</li>
+            <li>Fotografien des betroffenen Auges (1 Pflichtfoto, bis zu 2 weitere optional)</li>
+            <li>gew&auml;hlter Termin (Datum und Uhrzeit)</li>
+            <li>Angabe, wie Sie auf uns aufmerksam geworden sind (optional)</li>
+            <li>Bemerkungen (optional)</li>
           </ul>
-
-          <h3>Rechtsgrundlage</h3>
           <p>
-            Die vorgenannte Verarbeitung basiert auf der Rechtsgrundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 UAbs. 1 lit. f DS‑GVO. Unser berechtigtes Interesse ergibt sich aus den vorstehend genannten Zwecken der Verarbeitung.
+            <strong>Hinweis zu Gesundheitsdaten:</strong> Die Angaben zu Beschwerden, betroffenen Augen und die hochgeladenen Fotos sind Gesundheitsdaten im Sinne von Art. 9 DSGVO. Bereits die Tatsache, dass Sie einen Termin bei einer Augen&auml;rztin buchen, kann ein Gesundheitsdatum darstellen. Wir verarbeiten diese Daten ausschlie&szlig;lich zum Zweck der Terminverwaltung, Behandlungsvorbereitung und &auml;rztlichen Dokumentation.
+          </p>
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 9 Abs. 2 lit. h DSGVO i.V.m. &sect; 22 Abs. 1 Nr. 1 lit. b BDSG (Gesundheitsvorsorge und Behandlung durch Angeh&ouml;rige eines Gesundheitsberufs).<br />
+            <strong>Auftragsverarbeitung:</strong> Mit eTermin wurde ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO geschlossen.<br />
+            <strong>Drittlandtransfer:</strong> Die Datenverarbeitung erfolgt auf Servern in Deutschland (Frankfurt). Der Firmensitz von eTermin liegt in der Schweiz; die Schweiz verf&uuml;gt &uuml;ber einen Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO), sodass kein zus&auml;tzlicher Schutzmechanismus erforderlich ist.<br />
+            <strong>Speicherdauer:</strong> Terminbuchungsdaten werden nach Ablauf des Termins und Abschluss der Behandlung gel&ouml;scht, es sei denn, eine l&auml;ngere Aufbewahrung ist zur Dokumentationspflicht erforderlich (s. Abschnitt 11).
           </p>
 
-          <h3>Speicherdauer</h3>
+          {/* ── 8. Telefon ── */}
+          <h2>8. Telefonische Kontaktaufnahme und R&uuml;ckruf</h2>
           <p>
-            Die oben genannten auf Sie beziehbaren Daten werden temporär in einem sogenannten Logfile (Protokoll-Datei) auf unserem Server gespeichert und nach 30 Tagen automatisiert gelöscht.
+            Wenn Sie uns telefonisch kontaktieren oder einen Termin &uuml;ber eTermin buchen, rufen wir Sie zum vereinbarten Zeitpunkt unter der von Ihnen angegebenen Telefonnummer zur&uuml;ck. Im Rahmen des Telefonats verarbeiten wir Ihre Telefonnummer sowie die Gespr&auml;chsinhalte, soweit diese f&uuml;r die Behandlung oder Bearbeitung Ihres Anliegens erforderlich sind.
+          </p>
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserf&uuml;llung) und Art. 9 Abs. 2 lit. h DSGVO (soweit Gesundheitsdaten betroffen sind).<br />
+            <strong>Speicherdauer:</strong> Im Rahmen der Behandlung werden die Gespr&auml;chsinhalte als Teil der Patientenakte dokumentiert und 10 Jahre aufbewahrt (&sect; 630f BGB).
           </p>
 
-          <h3>Empfänger</h3>
+          {/* ── 9. E-Mail ── */}
+          <h2>9. Kontaktaufnahme per E-Mail</h2>
           <p>
-            Wir nutzen einen Web-Hoster mit Serverstandort in Deutschland für die Bereitstellung unserer Website.
+            Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht zur Bearbeitung Ihrer Anfrage.
+          </p>
+          <p>
+            <strong>Anbieter E-Mail-Hosting:</strong> STRATO AG, Deutschland (Serverstandort Deutschland).
+          </p>
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Ma&szlig;nahmen bzw. Vertragserf&uuml;llung).<br />
+            <strong>Speicherdauer:</strong> E-Mails im Zusammenhang mit der Behandlung werden als Teil der Patientenakte 10 Jahre aufbewahrt. Sonstige Anfragen werden nach Erledigung gel&ouml;scht.
+          </p>
+          <p>
+            Wir weisen darauf hin, dass der Versand unverschl&uuml;sselter E-Mails Sicherheitsrisiken bergen kann. F&uuml;r die &Uuml;bermittlung von Augenfotos und anderen gesundheitsbezogenen Unterlagen nutzen Sie bitte das verschl&uuml;sselte Buchungsportal &uuml;ber eTermin.
           </p>
 
-          <h3>Ihr Recht auf Widerspruch</h3>
-          <p>
-            Sie haben gem. Art. 21 DS‑GVO das Recht auf Widerspruch gegen die oben beschriebene Verarbeitung der auf Sie bezogenen Daten, wenn Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben oder Ihr Widerspruch gegen Direktwerbung gerichtet ist.
-          </p>
-
-          {/* ── Google Analytics ── */}
-          <h2>Verarbeitungen im Zusammenhang mit der Verhaltensanalyse Ihres Website-Besuches mittels Google Analytics</h2>
-
-          <h3>Zwecke</h3>
-          <p>
-            Um unser Webangebot und unsere Werbung zu optimieren, analysieren wir Ihr Nutzerverhalten mittels Funktionen des Webanalysedienstes Google Analytics. In unserem Auftrag wertet Google die unten genannten auf Sie beziehbaren Daten aus, um für uns Berichte über Ihre Aktivitäten auf unserer Website zusammenzustellen.
-          </p>
-
-          <h3>Datenarten</h3>
-          <p>Im Falle Ihrer Einwilligung werden folgende Daten erhoben:</p>
+          {/* ── 10. Patientendaten ── */}
+          <h2>10. Patientendaten im Rahmen der Behandlung</h2>
+          <p>Im Rahmen der telemedizinischen Behandlung verarbeiten wir:</p>
           <ul>
-            <li>Ihre Zugriffszeit auf unsere Website,</li>
-            <li>Ihr Zugriffsort bei Besuch unserer Website,</li>
-            <li>inwiefern Sie unsere Website gerade aktiv nutzen,</li>
-            <li>ob Sie ein wiederkehrender Besucher unserer Website sind,</li>
-            <li>die Sprache, das Gerätemodell und die Plattform (z. B. iOS oder Android) Ihres Endgeräts.</li>
+            <li>Stammdaten (Name, Geburtsdatum, Kontaktdaten)</li>
+            <li>Angaben aus dem Anamnesefragebogen</li>
+            <li>Ergebnisse des Online-Sehtests</li>
+            <li>Fotografien des betroffenen Auges</li>
+            <li>Befunde und &auml;rztliche Dokumentation</li>
           </ul>
           <p>
-            Wir haben hinsichtlich Google Analytics die Funktion „IP-Anonymisierung" aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union vor der Übermittlung in die USA gekürzt.
-          </p>
-          <p>
-            Wir nutzen die Funktion „demografische Merkmale" von Google Analytics. Dadurch können Berichte erstellt werden, die Aussagen zu Alter, Geschlecht und Interessen der Seitenbesucher enthalten.
-          </p>
-
-          <h3>Rechtsgrundlage</h3>
-          <p>
-            Die Rechtsgrundlage dieser Verarbeitung ist Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS‑GVO.
+            <strong>Rechtsgrundlage:</strong> Art. 9 Abs. 2 lit. h DSGVO i.V.m. &sect; 22 Abs. 1 Nr. 1 lit. b BDSG (Behandlung durch Angeh&ouml;rige eines Gesundheitsberufs) sowie &sect; 630f BGB (&auml;rztliche Dokumentationspflicht).<br />
+            <strong>Speicherort:</strong> Die Patientendaten werden verschl&uuml;sselt bei eTermin (Server Frankfurt am Main, Deutschland) gespeichert.<br />
+            <strong>Speicherdauer:</strong> 10 Jahre nach Abschluss der Behandlung (&sect; 630f Abs. 3 BGB).
           </p>
 
-          <h3>Speicherdauer</h3>
-          <p>Die oben genannten auf Sie beziehbaren Daten werden für 14 Monate gespeichert.</p>
-
-          <h3>Empfänger</h3>
-          <p>
-            Die über Google Analytics verarbeiteten Daten werden an Google Ireland Ltd., Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland, und an Google LLC, 1600 Amphitheatre Parkway Mountain View, CA 94043, USA, übermittelt und in den USA verarbeitet. Google ist für diese Verarbeitung unser Auftragsverarbeiter. Die Rechtsgrundlage für die Drittlandübermittlung sind Standarddatenschutzklauseln gem. Art. 46 DS‑GVO. Mehr Informationen finden Sie unter{' '}
-            <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" rel="noopener">support.google.com/analytics/answer/6004245</a>.
-          </p>
-
-          <h3>Ihr Recht auf Widerruf Ihrer Einwilligung</h3>
-          <p>
-            Sie haben das Recht, Ihre Einwilligung jederzeit zu widerrufen. Die Rechtmäßigkeit der aufgrund Ihrer Einwilligung bis zum Widerruf erfolgten Verarbeitung wird davon nicht berührt.
-          </p>
-
-          {/* ── Google Ads ── */}
-          <h2>Verarbeitungen im Zusammenhang mit der Nutzerverhaltensanalyse mittels Google Ads</h2>
-
-          <h3>Zwecke</h3>
-          <p>
-            Wir nutzen Conversion-Tracking-Cookies von Google Ads, um unsere Google-Ads-Kampagnen zu optimieren und ihren Erfolg zu messen.
-          </p>
-
-          <h3>Datenarten</h3>
-          <p>Es werden folgende Arten von Daten über Sie verarbeitet:</p>
+          {/* ── 11. Aufbewahrungsfristen ── */}
+          <h2>11. Aufbewahrungsfristen</h2>
+          <p>F&uuml;r &auml;rztliche Dokumentation gelten folgende gesetzliche Aufbewahrungsfristen:</p>
           <ul>
-            <li>Ihr letzter Sichtkontakt unserer Werbeanzeige,</li>
-            <li>die Anzahl der von Ihnen gesichteten und geklickten Werbeanzeigen pro Platzierung,</li>
-            <li>Ihre Unique-Cookie-ID,</li>
-            <li>die Sprache, das Gerätemodell und die Plattform (z. B. iOS oder Android) Ihres Endgeräts,</li>
-            <li>Ihre demographischen Daten (Geschlecht, Alter und Interessen).</li>
+            <li>Patientenakte (Befunde, Berichte, Fotos): 10 Jahre (&sect; 630f Abs. 3 BGB)</li>
+            <li>Abrechnungsunterlagen: 10 Jahre (&sect; 147 AO)</li>
+            <li>Gesch&auml;ftsbriefe (Rechnungen): 10 Jahre (&sect; 147 AO), 6 Jahre (&sect; 257 HGB)</li>
           </ul>
+          <p>Nach Ablauf der Frist werden die Daten gel&ouml;scht, sofern keine anderweitige Rechtsgrundlage besteht.</p>
 
-          <h3>Rechtsgrundlage</h3>
-          <p>
-            Die Rechtsgrundlage dieser Verarbeitung ist Ihre Einwilligung gem. Art. 6 Abs. 1 UAbs. 1 lit. a DS‑GVO.
-          </p>
-
-          <h3>Speicherdauer</h3>
-          <p>
-            Die Speicherdauer der Cookies ist auf 30 Tage begrenzt. Die Speicherdauer Ihrer verarbeiteten Daten beträgt 24 Monate.
-          </p>
-
-          <h3>Empfänger</h3>
-          <p>
-            Die über Google Ads verarbeiteten Daten werden an Google Ireland Ltd. und Google LLC, USA, übermittelt. Mehr Informationen finden Sie unter{' '}
-            <a href="https://privacy.google.com/intl/de/businesses/adsservices/" target="_blank" rel="noopener">privacy.google.com</a>.
-          </p>
-
-          {/* ── E-Mail ── */}
-          <h2>Verarbeitungen bei Kontaktaufnahme mit uns per E-Mail</h2>
-
-          <h3>Zwecke</h3>
-          <p>
-            Über die auf unserer Website angegebenen E-Mail-Adressen haben Sie die Möglichkeit, mit uns in Kontakt zu treten.
-          </p>
-
-          <h3>Datenarten</h3>
-          <p>
-            Um Ihre Anfrage zu bearbeiten, verwenden wir die uns von Ihnen zur Verfügung gestellte E-Mail-Adresse bzw. Telefonnummer. Weitere Informationen erheben wir nur direkt bei Ihnen, wo sie notwendig und erheblich für die Beantwortung Ihrer Anfrage sind.
-          </p>
-          <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per E-Mail.</strong></p>
-
-          <h3>Rechtsgrundlage</h3>
-          <p>
-            Die Verarbeitung zum Zwecke der Kontaktaufnahme mit uns erfolgt gemäß Art. 6 Abs. 1 UAbs. 1 lit. b DS‑GVO.
-          </p>
-
-          <h3>Speicherdauer</h3>
-          <p>
-            Erfolgt die Kontaktaufnahme im Rahmen des Behandlungsvertrages, bewahren wir Ihre Informationen im Rahmen Ihrer Patientenakte für zehn Jahre gem. §§ 630a ff. BGB auf. Ansonsten löschen wir die erhobenen personenbezogenen Daten nach Erledigung der von Ihnen gestellten Anfrage.
-          </p>
-
-          <h3>Empfänger</h3>
-          <p>
-            Wir nutzen einen deutschen Auftragsverarbeiter mit deutschem Serverstandort für die Bereitstellung unseres E-Mail-Servers.
-          </p>
-
-          {/* ── Chat ── */}
-          <h2>Verarbeitungen bei Kontaktaufnahme mit uns per Chat</h2>
-
-          <h3>Zwecke</h3>
-          <p>
-            Sie haben die Möglichkeit, auf unserer Website über eine Chat-Funktion mit uns in Kontakt zu treten.
-          </p>
-          <p><strong>Bitte übermitteln Sie uns keine Gesundheitsdaten per Chat.</strong></p>
-
-          <h3>Datenarten</h3>
-          <p>Um Ihre Anfrage zu bearbeiten, verarbeiten wir:</p>
+          {/* ── 12. Empfänger ── */}
+          <h2>12. Empf&auml;nger und Weitergabe von Daten</h2>
+          <p>Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur:</p>
           <ul>
-            <li>Ihre IP-Adresse,</li>
-            <li>den Zeitpunkt Ihrer Anfrage,</li>
-            <li>das von Ihnen verwendete Betriebssystem,</li>
-            <li>die von Ihnen verwendete Browserart,</li>
-            <li>die URL unserer Website, auf der Sie die Chat-Funktion genutzt haben.</li>
+            <li>wenn Sie ausdr&uuml;cklich eingewilligt haben (Art. 6 Abs. 1 lit. a DSGVO),</li>
+            <li>wenn dies zur Vertragserf&uuml;llung erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO),</li>
+            <li>wenn eine gesetzliche Verpflichtung besteht (Art. 6 Abs. 1 lit. c DSGVO).</li>
           </ul>
+          <p><strong>Auftragsverarbeiter:</strong> Wir setzen folgende Auftragsverarbeiter ein, mit denen jeweils ein AVV nach Art. 28 DSGVO geschlossen wurde:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Anbieter</th>
+                <th>Zweck</th>
+                <th>Serverstandort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>STRATO AG, Berlin</td>
+                <td>Website-Hosting, E-Mail</td>
+                <td>Deutschland</td>
+              </tr>
+              <tr>
+                <td>eTermin GmbH, Schweiz</td>
+                <td>Terminbuchung, Patientendatenspeicherung</td>
+                <td>Deutschland (Frankfurt)</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <h3>Rechtsgrundlage</h3>
-          <p>
-            Die Verarbeitung zum Zwecke der Kontaktaufnahme mit uns erfolgt gemäß Art. 6 Abs. 1 UAbs. 1 lit. b DS‑GVO.
-          </p>
-
-          <h3>Speicherdauer</h3>
-          <p>
-            Die im Rahmen der Kontaktaufnahme per Chat erhobenen personenbezogenen Daten werden nach Erledigung der von Ihnen gestellten Anfrage gelöscht.
-          </p>
-
-          <h3>Empfänger</h3>
-          <p>
-            Für die Bereitstellung unseres Chats setzen wir einen Auftragsverarbeiter mit Serverstandort in Deutschland ein.
-          </p>
-
-          {/* ── Ihre Rechte ── */}
-          <h2>Ihre Rechte im Zusammenhang mit unserer Verarbeitung Ihrer personenbezogenen Daten</h2>
-
-          <p>Sie haben das Recht,</p>
+          {/* ── 13. Ihre Rechte ── */}
+          <h2>13. Ihre Rechte</h2>
+          <p>Sie haben gegen&uuml;ber uns folgende Rechte bez&uuml;glich Ihrer personenbezogenen Daten:</p>
           <ul>
-            <li>
-              nach <strong>Art. 15 DS‑GVO</strong> Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen;
-            </li>
-            <li>
-              nach <strong>Art. 16 DS‑GVO</strong> unverzüglich die Berichtigung unrichtiger oder die Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen;
-            </li>
-            <li>
-              nach <strong>Art. 17 DS‑GVO</strong> die Löschung Ihrer von uns gespeicherten Daten zu verlangen, soweit die Verarbeitung nicht zur Ausübung des Rechts auf freie Meinungsäußerung, zur Erfüllung einer rechtlichen Verpflichtung oder zur Geltendmachung von Rechtsansprüchen erforderlich ist;
-            </li>
-            <li>
-              nach <strong>Art. 18 DS‑GVO</strong> die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen;
-            </li>
-            <li>
-              nach <strong>Art. 20 DS‑GVO</strong> Ihre personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen;
-            </li>
-            <li>
-              nach <strong>Art. 7 Abs. 3 DS‑GVO</strong> Ihre einmal erteilte Einwilligung jederzeit uns gegenüber zu widerrufen;
-            </li>
-            <li>
-              nach <strong>Art. 77 DS‑GVO</strong> sich bei einer Aufsichtsbehörde zu beschweren. Die für unseren Sitz zuständige Aufsichtsbehörde ist die Landesbeauftragte für den Datenschutz Nordrhein-Westfalen.
-            </li>
+            <li><strong>Auskunft</strong> (Art. 15 DSGVO): Sie k&ouml;nnen Auskunft &uuml;ber die bei uns gespeicherten Daten verlangen.</li>
+            <li><strong>Berichtigung</strong> (Art. 16 DSGVO): Sie k&ouml;nnen die Korrektur unrichtiger Daten verlangen.</li>
+            <li><strong>L&ouml;schung</strong> (Art. 17 DSGVO): Sie k&ouml;nnen die L&ouml;schung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+            <li><strong>Einschr&auml;nkung</strong> (Art. 18 DSGVO): Sie k&ouml;nnen die Einschr&auml;nkung der Verarbeitung verlangen.</li>
+            <li><strong>Daten&uuml;bertragbarkeit</strong> (Art. 20 DSGVO): Sie k&ouml;nnen Ihre Daten in einem strukturierten, maschinenlesbaren Format erhalten.</li>
+            <li><strong>Widerspruch</strong> (Art. 21 DSGVO): Sie k&ouml;nnen der Verarbeitung widersprechen, soweit diese auf berechtigtem Interesse beruht.</li>
+            <li><strong>Widerruf</strong> (Art. 7 Abs. 3 DSGVO): Erteilte Einwilligungen k&ouml;nnen Sie jederzeit widerrufen.</li>
           </ul>
+          <p>Zur Aus&uuml;bung Ihrer Rechte wenden Sie sich an: <a href="mailto:kontakt@blickdoktor.de">kontakt@blickdoktor.de</a></p>
 
-          <h2>Ihr Recht zum Widerspruch</h2>
+          {/* ── 14. Beschwerderecht ── */}
+          <h2>14. Beschwerderecht bei der Aufsichtsbeh&ouml;rde</h2>
           <p>
-            In den Fällen, in denen die Verarbeitung auf der Rechtsgrundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 UAbs. 1 lit. f DS‑GVO erfolgt, können Sie nach Art. 21 DS‑GVO Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einlegen, wenn Gründe vorliegen, die sich aus Ihrer besonderen Situation ergeben oder sich der Widerspruch gegen Direktwerbung richtet.
+            Sie haben das Recht, sich bei der zust&auml;ndigen Datenschutz-Aufsichtsbeh&ouml;rde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die DSGVO verst&ouml;&szlig;t:
           </p>
           <p>
-            Im Falle des Widerspruchs gegen Direktwerbung haben Sie ein generelles Widerspruchsrecht, das ohne Angaben einer besonderen Situation von uns umgesetzt wird.
-          </p>
-
-          <h2>Widerruf Ihrer Einwilligungen</h2>
-          <p>
-            In jedem Fall der Verarbeitung aufgrund Ihrer nach Art. 6 Abs. 1 UAbs. 1 lit. a bzw. Art. 9 Abs. 2 lit. a DS‑GVO erteilten Einwilligung, können Sie Ihre Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung wird dadurch nicht berührt.
-          </p>
-          <p>
-            Sie können Ihre uns gegebenen Einwilligungen einfach durch eine E-Mail an{' '}
-            <a href="mailto:info@blickdoktor.com">info@blickdoktor.com</a> widerrufen.
-          </p>
-
-          <h2>Datenübermittlung</h2>
-          <p>
-            Grundsätzlich geben wir Ihre persönlichen Daten nicht an Dritte weiter. Dies geschieht nur dann, wenn Sie Ihre ausdrückliche Einwilligung erteilt haben, die Weitergabe zur Geltendmachung von Rechtsansprüchen erforderlich ist, eine gesetzliche Verpflichtung besteht oder die Weitergabe für die Abwicklung von Vertragsverhältnissen mit Ihnen erforderlich ist.
-          </p>
-          <p>
-            Wir weisen Sie darauf hin, dass wir mit externen Dienstleistern Auftragsverarbeitungsverträge gem. Art. 28 DS‑GVO abgeschlossen haben. Bei der Auswahl dieser Auftragsverarbeiter haben wir sichergestellt, dass sie hinreichend Garantien dafür bieten, dass geeignete technische und organisatorische Maßnahmen so durchgeführt werden, dass die Verarbeitung im Einklang mit den Anforderungen des Datenschutzes steht.
-          </p>
-
-          <h2>Datensicherheit</h2>
-          <p>
-            Zur Gewährleistung der adäquaten Sicherheit der Verarbeitung Ihrer personenbezogenen Daten bedienen wir uns geeigneter technischer und organisatorischer Maßnahmen. Bei dem Besuch unserer Website kommt das SSL-Verfahren zum Einsatz, kombiniert mit der jeweils höchsten Verschlüsselungsstufe, die Ihr Browser unterstützt. Regelmäßig handelt es sich um eine 256-Bit-Verschlüsselung.
-          </p>
-          <p>
-            Mit unseren Auftragsverarbeitern entwickeln wir die technischen und organisatorischen Maßnahmen regelmäßig weiter und streben eine stete Verbesserung der Sicherheitsbedingungen für Ihre personenbezogenen Daten an.
-          </p>
-
-          <h2>Aktualität dieser Datenschutzerklärung</h2>
-          <p>
-            Diese Datenschutzerklärung ist gültig und hat den Stand Februar 2022. Da wir stets bestrebt sind, mit dem technischen Fortschritt zu gehen, entwickeln wir unsere Website und deren Angebote ebenso weiter, wie die technischen und organisatorischen Maßnahmen zum Schutz Ihrer Daten. In diesem Zusammenhang kann es nötig sein, auch die Datenschutzerklärung entsprechend anzupassen.
+            Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen<br />
+            Kavalleriestraße 2&ndash;4<br />
+            40213 D&uuml;sseldorf<br />
+            <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a>
           </p>
         </div>
       </main>
