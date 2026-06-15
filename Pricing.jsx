@@ -11,6 +11,12 @@ const items = [
 { label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '37,54 €' },
 ];
 
+const surcharges = [
+{ label: 'Nachtzuschlag 6 – 8 Uhr & 20 – 22 Uhr', price: '10,49 €' },
+{ label: 'Nachtzuschlag 22 – 6 Uhr', price: '18,65 €' },
+{ label: 'Feiertags- und Wochenendzuschlag', price: '12,82 €' },
+];
+
 return (
 <section id="preise" className="section">
 <div className="container section-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 64, alignItems: 'flex-start' }}>
@@ -34,6 +40,8 @@ Abgerechnet nach der Gebührenordnung für Ärzte als Privatpatient oder Selbstz
 </div>
 <Button variant="primary" size="lg" as="a" href="https://www.etermin.net/blickdoktor" target="_blank" rel="noopener" iconRight="arrow-right">Termin vereinbaren</Button>
 </div>
+<div className="stack-6">
+{/* Bestehende Preisliste */}
 <div className="card" style={{ padding: 0, overflow: 'hidden', border: '1px solid var(--bd-line)' }}>
 <div style={{
 padding: '18px 28px', borderBottom: '1px solid var(--bd-line)',
@@ -70,6 +78,34 @@ background: 'var(--bd-bg-2)',
 fontSize: 13.5, color: 'var(--fg-3)'
 }}>
 Rezept und Krankschreibung sind im Preis enthalten, sofern medizinisch angezeigt (ausschließlich über Postweg möglich).
+</div>
+</div>
+
+{/* Zuschläge nach GOÄ */}
+<div className="card" style={{ padding: 0, overflow: 'hidden', border: '1px solid var(--bd-line)' }}>
+<div style={{
+padding: '18px 28px', borderBottom: '1px solid var(--bd-line)',
+background: 'var(--bd-bg-2)',
+display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'
+}}>
+<span className="eyebrow" style={{ color: 'var(--bd-sage-700)' }}>Zuschläge nach GOÄ</span>
+</div>
+<ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+{surcharges.map((it, i) => (
+<li key={it.label} style={{
+display: 'grid', gridTemplateColumns: '1fr auto',
+alignItems: 'center', gap: 16,
+padding: '20px 28px',
+borderTop: i ? '1px solid var(--bd-line)' : 'none'
+}}>
+<span style={{ fontSize: 16, color: 'var(--bd-ink)', fontWeight: 500 }}>{it.label}</span>
+<span style={{
+fontFamily: 'var(--font-serif)', fontSize: 24, letterSpacing: '-0.01em',
+color: 'var(--bd-ink)'
+}}>{it.price}</span>
+</li>
+))}
+</ul>
 </div>
 </div>
 </div>
