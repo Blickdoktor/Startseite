@@ -284,3 +284,28 @@ ul { margin: 0; padding: 0; list-style: none; }
     aspect-ratio: 16/10 !important;
   }
 }
+
+/* Language bar (matches TR page style) */
+#lang-bar {
+  position: sticky;
+  top: 60px;
+  z-index: 29;
+  background: rgba(246,242,235,0.95) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+@media (max-width: 768px) {
+  #lang-bar {
+    padding: 8px 16px !important;
+    gap: 10px !important;
+  }
+}
+@media (max-width: 480px) {
+  #lang-bar {
+    gap: 4px !important;
+  }
+  #lang-bar > * {
+    font-size: 12px !important;
+    padding: 3px 6px !important;
+  }
+}

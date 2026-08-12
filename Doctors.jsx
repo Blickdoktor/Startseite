@@ -10,7 +10,7 @@ function Doctors() {
       initials: 'EO',
       tone: 'sage',
       href: '/Startseite/aerzte/dr-evrim-oehmichen/',
-      photo: 'https://static.wixstatic.com/media/4b69d1_1b75da51fa70446c8c054b3b46e910e4~mv2.jpg'
+      photo: '/Startseite/dr-evrim-oehmichen.png'
     },
     {
       name: 'Vincent Oehmichen FEBO',
