@@ -51,6 +51,7 @@ Blickdoktor – Online Augenarztpraxis Dr. Oehmichen für Privatpatienten und Se
 { label: 'Datenschutzerklärung', href: '/Startseite/datenschutzerklaerung/' },
 { label: 'Impressum', href: '/Startseite/impressum/' },
 { label: 'Kontakt', href: 'mailto:kontakt@blickdoktor.de' },
+{ label: '🇹🇷 Türkçe', href: '/Startseite/tr/' },
 ]} />
 </div>
 

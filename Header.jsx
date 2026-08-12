@@ -31,6 +31,7 @@ var links = [
     { href: '/Startseite/#team', label: 'Team' },
     { href: '/Startseite/#preise', label: 'Preise' },
     { href: '/Startseite/aerzte/dr-evrim-oehmichen/', label: 'Über uns' },
+    { href: '/Startseite/tr/', label: '🇹🇷 Türkçe' },
   ];
 
   var bg = (scrolled || menuOpen) ? 'rgba(246,242,235,0.97)' : 'transparent';
