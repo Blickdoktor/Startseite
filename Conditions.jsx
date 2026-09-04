@@ -3,11 +3,11 @@
 function Conditions({ onBook }) {
   const isMobile = useIsMobile();
   const items = [
-    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.', price: '37,54 €' },
-    { icon: 'glasses', title: 'Lidproblem/Schwellung', body: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn', price: '37,54 €' },
-    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.', price: '37,54 €' },
-    { icon: 'eye',         title: 'Rötung/Reizung',    body: 'Rote, juckende Augen, Entzündung, Allergien — schnelle Einschätzung und Therapie.',    price: '37,54 €' },
-    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.',       price: '37,54 €' },
+    { icon: 'droplet',     title: 'Trockene Augen',         body: 'Brennen, Juckreiz, Fremdkörpergefühl — Beratung und Therapie.' },
+    { icon: 'glasses', title: 'Lidproblem/Schwellung', body: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn' },
+    { icon: 'file-text', title: 'Aufklärung über Erkrankung', body: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.' },
+    { icon: 'eye',         title: 'Rötung/Reizung',    body: 'Rote, juckende Augen, Entzündung, Allergien — schnelle Einschätzung und Therapie.' },
+    { icon: 'shield-alert',title: 'Zweitmeinung',           body: 'Fachärztliche Einschätzung zu einem bestehenden Befund.' },
   ];
   return (
     <section id="sprechstunde" className="section">
@@ -33,7 +33,6 @@ function Conditions({ onBook }) {
                 }}>
                   <Icon name={it.icon} size={20} />
                 </span>
-                <span className="meta" style={{ fontFamily: 'var(--font-mono)', color: 'var(--fg-3)' }}>{it.price}</span>
               </div>
               <h3 style={{ margin: '0 0 6px', fontSize: 20 }}>{it.title}</h3>
               <p style={{ margin: 0, color: 'var(--fg-2)', fontSize: 14.5, lineHeight: 1.55 }}>{it.body}</p>
