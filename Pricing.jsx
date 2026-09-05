@@ -3,12 +3,12 @@
 function Pricing({ onBook }) {
 
 const items = [
-{ label: 'Aufklärung über Erkrankung', hint: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.', price: '37,54 €' },
-{ label: 'Trockene Augen oder Fremdkörpergefühl', hint: 'Beratung & Therapieempfehlung', price: '37,54 €' },
-{ label: 'Rötung/Reizung', hint: 'juckende Augen, Schmerzen, Allergien', price: '37,54 €' },
-{ label: 'Lidproblem/Schwellung', hint: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn', price: '37,54 €' },
-{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin', price: '37,54 €' },
-{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes', price: '37,54 €' },
+{ label: 'Aufklärung über Erkrankung', hint: 'u.a. Altersbedingte Makuladegeneration, Glaukom, Grauer Star, u.v.m.' },
+{ label: 'Trockene Augen oder Fremdkörpergefühl', hint: 'Beratung & Therapieempfehlung' },
+{ label: 'Rötung/Reizung', hint: 'juckende Augen, Schmerzen, Allergien' },
+{ label: 'Lidproblem/Schwellung', hint: 'Druckschmerz, Lidrandentzündung, Gerstenkorn/Hagelkorn' },
+{ label: 'Anderes Anliegen', hint: 'Beratung mit Fachärztin' },
+{ label: 'Zweitmeinung', hint: 'Beurteilung eines bestehenden Befundes' },
 ];
 
 const surcharges = [
@@ -64,10 +64,6 @@ background: it.strong ? 'var(--bd-sage-50)' : 'transparent'
 <span style={{ fontSize: 16, color: 'var(--bd-ink)', fontWeight: 500 }}>{it.label}</span>
 <span className="meta">{it.hint}</span>
 </div>
-<span style={{
-fontFamily: 'var(--font-serif)', fontSize: 24, letterSpacing: '-0.01em',
-color: 'var(--bd-ink)'
-}}>{it.price}</span>
 </li>
 ))}
 </ul>
