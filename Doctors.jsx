@@ -22,7 +22,8 @@ function Doctors() {
       tone: 'blue',
       href: 'aerzte/dr-vincent-oehmichen/',
       photo: 'dr-vincent-oehmichen.jpg',
-      photoPosition: 'center top'
+      photoPosition: 'center top',
+      photoScale: 1.08
     },
   ];
 
@@ -53,7 +54,7 @@ function Doctors() {
                   marginBottom: 16, overflow: 'hidden'
                 }}>
                   {d.photo
-                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', display: 'block' }} />
+                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', transform: d.photoScale ? `scale(${d.photoScale})` : undefined, transformOrigin: 'center 15%', display: 'block' }} />
                     : d.initials
                   }
                 </div>
