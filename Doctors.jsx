@@ -14,7 +14,7 @@ function Doctors() {
     },
     {
       name: 'Vincent Oehmichen FEBO',
-      role: 'Facharzt für Augenheilkunde, Fellow of the European Board of Ophthalmology',
+      role: 'Facharzt für Augenheilkunde',
       roleExtra: 'Fellow of the European Board of Ophthalmology',
       focus: 'Augenheilkunde',
       initials: 'VO',
