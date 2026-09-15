@@ -14,13 +14,13 @@ function Doctors() {
     },
     {
       name: 'Vincent Oehmichen FEBO',
-      role: 'Augenarzt',
+      role: 'Facharzt für Augenheilkunde, FEBO',
       roleExtra: 'Fellow of the European Board of Ophthalmology',
       focus: 'Augenheilkunde',
       initials: 'VO',
       tone: 'blue',
       href: '/Startseite/aerzte/dr-vincent-oehmichen/',
-      photo: null
+      photo: '/Startseite/dr-vincent-oehmichen.jpg'
     },
   ];
 
