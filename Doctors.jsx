@@ -11,8 +11,7 @@ function Doctors() {
       tone: 'sage',
       href: 'aerzte/dr-evrim-oehmichen/',
       photo: 'dr-evrim-oehmichen.png',
-      photoPosition: 'center',
-      photoScale: 0.94
+      photoPosition: 'center'
     },
     {
       name: 'Vincent Oehmichen FEBO',
@@ -54,7 +53,7 @@ function Doctors() {
                   marginBottom: 16, overflow: 'hidden'
                 }}>
                   {d.photo
-                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', transform: d.photoScale ? `scale(${d.photoScale})` : undefined, transformOrigin: 'center 35%', display: 'block' }} />
+                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', display: 'block' }} />
                     : d.initials
                   }
                 </div>
