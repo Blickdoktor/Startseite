@@ -54,7 +54,7 @@ function Doctors() {
                   marginBottom: 16, overflow: 'hidden'
                 }}>
                   {d.photo
-                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', transform: d.photoScale ? `scale(${d.photoScale}) translateY(-6%)` : undefined, display: 'block' }} />
+                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', transform: d.photoScale ? `scale(${d.photoScale})` : undefined, display: 'block' }} />
                     : d.initials
                   }
                 </div>
