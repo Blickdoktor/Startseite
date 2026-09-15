@@ -10,7 +10,8 @@ function Doctors() {
       initials: 'EO',
       tone: 'sage',
       href: '/Startseite/aerzte/dr-evrim-oehmichen/',
-      photo: '/Startseite/dr-evrim-oehmichen.png'
+      photo: '/Startseite/dr-evrim-oehmichen.png',
+      photoPosition: 'center'
     },
     {
       name: 'Vincent Oehmichen FEBO',
@@ -20,7 +21,8 @@ function Doctors() {
       initials: 'VO',
       tone: 'blue',
       href: '/Startseite/aerzte/dr-vincent-oehmichen/',
-      photo: '/Startseite/dr-vincent-oehmichen.jpg'
+      photo: '/Startseite/dr-vincent-oehmichen.jpg',
+      photoPosition: 'center top'
     },
   ];
 
@@ -51,7 +53,7 @@ function Doctors() {
                   marginBottom: 16, overflow: 'hidden'
                 }}>
                   {d.photo
-                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    ? <img src={d.photo} alt={d.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: d.photoPosition || 'center', display: 'block' }} />
                     : d.initials
                   }
                 </div>
