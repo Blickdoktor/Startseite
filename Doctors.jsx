@@ -12,7 +12,7 @@ function Doctors() {
       href: 'aerzte/dr-evrim-oehmichen/',
       photo: 'dr-evrim-oehmichen.png',
       photoPosition: 'center',
-      photoScale: 0.72
+      photoScale: 0.94
     },
     {
       name: 'Vincent Oehmichen FEBO',
