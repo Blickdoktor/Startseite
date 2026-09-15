@@ -9,8 +9,8 @@ function Doctors() {
       focus: 'Gründerin von Blickdoktor',
       initials: 'EO',
       tone: 'sage',
-      href: '/Startseite/aerzte/dr-evrim-oehmichen/',
-      photo: '/Startseite/dr-evrim-oehmichen.png',
+      href: 'aerzte/dr-evrim-oehmichen/',
+      photo: 'dr-evrim-oehmichen.png',
       photoPosition: 'center'
     },
     {
@@ -20,8 +20,8 @@ function Doctors() {
       focus: 'Augenheilkunde',
       initials: 'VO',
       tone: 'blue',
-      href: '/Startseite/aerzte/dr-vincent-oehmichen/',
-      photo: '/Startseite/dr-vincent-oehmichen.jpg',
+      href: 'aerzte/dr-vincent-oehmichen/',
+      photo: 'dr-vincent-oehmichen.jpg',
       photoPosition: 'center top'
     },
   ];
