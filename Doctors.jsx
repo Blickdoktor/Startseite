@@ -35,7 +35,7 @@ function Doctors() {
         <div className="section-head" style={{ marginBottom: 48 }}>
           <span className="eyebrow">Unser Team</span>
           <h2>Approbierte Augenärzt:innen,<br/><span className="serif-italic" style={{ color: 'var(--bd-sage-700)' }}>die zuhören.</span></h2>
-          <p>Alle behandelnden Ärzt:innen sind in Deutschland approbiert und mehrfach fachlich geprüft. Sie wählen Ihre:n Ärzt:in selbst aus.</p>
+          <p>Alle behandelnden Ärzt:innen sind in Deutschland approbiert und mehrfach fachlich geprüft.</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16, maxWidth: 640, margin: '0 auto' }}>
           {docs.map(d => (
